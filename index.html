@@ -2,6 +2,11 @@
 <html lang="nl"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Geldverstrekkersinformatie</title>
+<!-- Niet indexeren: intern extranet voor ASN Franchisekantoren -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
 <style>
 :root{--ink:#1b1f24;--muted:#697280;--line:#e6e9ee;--bg:#f5f7f9;--card:#fff;--accent:#2f6fed;
 --radius:16px;--shadow:0 1px 2px rgba(16,24,40,.04),0 10px 26px rgba(16,24,40,.07)}
@@ -12,6 +17,14 @@ color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:ant
 a{color:var(--accent);text-decoration:none;font-weight:600}a:hover{text-decoration:underline}
 .tophero{background:linear-gradient(135deg,#12151a,#232a33);border-radius:var(--radius);
 padding:24px 26px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.tophero{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.tophero .htxt{flex:1 1 320px}
+.ctabtn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:12px;background:#ffd400;color:#12151a;text-decoration:none;
+font-weight:800;font-size:15px;padding:11px 20px 11px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:transform .15s,box-shadow .15s}
+.ctabtn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.ctabtn svg{width:30px;height:30px;display:block}
+.ctabtn small{display:block;font-size:11px;font-weight:600;color:#3a3f47;letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:640px){.ctabtn{width:100%;justify-content:center}}
 .tophero::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;
 background:radial-gradient(circle,rgba(47,111,237,.4),transparent 70%)}
 .tophero .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#7fb0ff;font-weight:700;margin:0 0 5px}
@@ -72,9 +85,15 @@ padding:10px 16px;border-radius:10px;margin-top:6px}.cta:hover{filter:brightness
 <div class="wrap">
   <div id="overview">
     <header class="tophero">
-      <p class="eyebrow">Voor adviseurs</p>
-      <h1>Geldverstrekkersinformatie</h1>
-      <p>Kies een geldverstrekker voor contact- en beheergegevens: website, extranet, intermediairdesk, accountmanagement en helpdesk.</p>
+      <div class="htxt">
+        <p class="eyebrow">Voor adviseurs</p>
+        <h1>Geldverstrekkersinformatie</h1>
+        <p>Kies een geldverstrekker voor contact- en beheergegevens: website, extranet, intermediairdesk, accountmanagement en helpdesk.</p>
+      </div>
+      <a class="ctabtn" href="https://verzekeringhypotheek.blinqx.tech/contact" onclick="window.open(this.href,'blinqxcontact','width=1100,height=800,noopener');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12151a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><path d="M4 13h3v5H5a1 1 0 0 1-1-1v-4zM17 13h3v4a1 1 0 0 1-1 1h-2v-5z"/><path d="M6 18v1a2 2 0 0 0 2 2h4"/></svg>
+        <span>eBLINQX contact →</span>
+      </a>
     </header>
     <div class="toolbar">
       <div class="search">
