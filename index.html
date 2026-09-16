@@ -24,7 +24,7 @@ font-size:15px;background:#fff;outline:none}
 .search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,111,237,.12)}
 .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;stroke:var(--muted);fill:none;stroke-width:2}
 .count{font-size:13px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:14px;margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px 14px;
 box-shadow:var(--shadow);cursor:pointer;transition:transform .12s,box-shadow .12s,border-color .12s;
 display:flex;flex-direction:column;gap:12px;min-height:132px;text-align:left}
@@ -66,7 +66,7 @@ display:inline-flex;align-items:center;justify-content:center;font-size:12px}
 .cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:700;
 padding:10px 16px;border-radius:10px;margin-top:6px}.cta:hover{filter:brightness(.94);text-decoration:none}
 .foot{margin-top:26px;font-size:12px;color:var(--muted);text-align:center}
-@media(max-width:640px){.cards{grid-template-columns:1fr}.dhero{padding:18px}.tophero h1{font-size:21px}}
+@media(max-width:640px){.grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.dhero{padding:18px}.tophero h1{font-size:21px}}
 </style></head>
 <body>
 <div class="wrap">
@@ -327,16 +327,39 @@ padding:10px 16px;border-radius:10px;margin-top:6px}.cta:hover{filter:brightness
       </div>
       
 <div class="cards">
-  <div class="card full accent-card">
+  <div class="card">
     <h3><span class="ic">🌐</span>Website</h3>
-    <p class="lead"><a href="https://www.allianz.nl" target="_blank" rel="noopener">www.allianz.nl</a></p>
+    <p class="lead"><a href="https://www.allianz.nl/particulier/hypotheken.html" target="_blank" rel="noopener">De Allianz Hypotheek</a></p>
   </div>
-  <div class="card"><h3><span class="ic">🔑</span>Extranet / adviseursportaal</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">📞</span>Telefoon</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">✉️</span>E-mail</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">👤</span>Accountmanager</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
+  <div class="card">
+    <h3><span class="ic">🔑</span>Extranet / adviseursportaal</h3>
+    <p class="lead"><a href="https://tussenpersoon.mijnleninginzicht.nl/" target="_blank" rel="noopener">tussenpersoon.mijnleninginzicht.nl</a></p>
+  </div>
+  <div class="card">
+    <h3><span class="ic">📞</span>Salesdesk Hypotheken — algemeen &amp; inhoudelijke vragen</h3>
+    <div class="kv"><span class="k">Telefoon</span><span class="v"><a href="tel:+31885776033">088 - 577 60 33</a></span></div>
+    <div class="kv"><span class="k">E-mail</span><span class="v"><a href="mailto:salesdesk.hypotheken@allianz.nl">salesdesk.hypotheken@allianz.nl</a></span></div>
+  </div>
+  <div class="card">
+    <h3><span class="ic">🛟</span>Helpdesk — Quion midoffice</h3>
+    <div class="kv"><span class="k">Telefoon</span><span class="v"><a href="tel:+31885774395">088 - 577 43 95</a></span></div>
+    <div class="kv"><span class="k">E-mail</span><span class="v"><a href="mailto:MidOfficeTeamE@quion.com">MidOfficeTeamE@quion.com</a></span></div>
+  </div>
+  <div class="card full">
+    <h3><span class="ic">👥</span>Accountmanager — ASN Franchisekantoren</h3>
+    <div class="am">
+      <div class="am-name">Dirk-Jan Noordhoek</div>
+      <div class="am-c"><span>📞 <a href="tel:+31622474027">06 22 47 40 27</a></span><span>✉️ <a href="mailto:dirk-jan.noordhoek@allianz.nl">dirk-jan.noordhoek@allianz.nl</a></span></div>
+    </div>
+    <p class="note">Voor inhoudelijke vragen bij voorkeur de Salesdesk bellen.</p>
+  </div>
+  <div class="card full">
+    <h3><span class="ic">📄</span>Actuele productinformatie</h3>
+    <div class="kv"><span class="k">Acceptatiegids</span><span class="v"><a href="https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf" target="_blank" rel="noopener">Hypotheekwijzer Allianz Hypotheek (pdf)</a></span></div>
+    <div class="kv"><span class="k">Voorwaarden</span><span class="v"><a href="https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf" target="_blank" rel="noopener">Algemene voorwaarden Allianz Hypotheek (pdf)</a></span></div>
+    <div class="kv"><span class="k">Rentetarieven</span><span class="v"><a href="https://www.allianz.nl/particulier/hypotheken/afsluiten/rente.html" target="_blank" rel="noopener">Actuele hypotheekrente</a> · <a href="https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-49.pdf" target="_blank" rel="noopener">Renteblad (pdf)</a></span></div>
+    <div class="kv"><span class="k">Formulieren</span><span class="v">Downloads onderaan <a href="https://www.allianz.nl/particulier/hypotheken.html" target="_blank" rel="noopener">De Allianz Hypotheek</a></span></div>
+  </div>
 </div>
 
     </section>
@@ -1089,16 +1112,45 @@ padding:10px 16px;border-radius:10px;margin-top:6px}.cta:hover{filter:brightness
       </div>
       
 <div class="cards">
-  <div class="card full accent-card">
+  <div class="card">
     <h3><span class="ic">🌐</span>Website</h3>
     <p class="lead"><a href="https://www.vennhypotheken.nl" target="_blank" rel="noopener">www.vennhypotheken.nl</a></p>
   </div>
-  <div class="card"><h3><span class="ic">🔑</span>Extranet / adviseursportaal</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">📞</span>Telefoon</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">✉️</span>E-mail</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">👤</span>Accountmanager</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
-  <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
+  <div class="card">
+    <h3><span class="ic">🔑</span>Extranet / adviseursportaal</h3>
+    <p class="lead"><a href="https://www.vennhypotheken.nl/adviseurs" target="_blank" rel="noopener">Adviseursomgeving Venn</a> — vrij toegankelijk, geen inloggegevens nodig.</p>
+    <p class="note">Daarnaast <strong>E-adviseur</strong> van Stater voor inzage in dossiers: <a href="https://advisory.stater.nl" target="_blank" rel="noopener">Inloggen E-adviseur</a>.</p>
+  </div>
+  <div class="card">
+    <h3><span class="ic">📞</span>Algemeen — Venn Hypotheken</h3>
+    <div class="kv"><span class="k">Telefoon</span><span class="v"><a href="tel:+31763033900">076 - 30 33 900</a></span></div>
+    <div class="kv"><span class="k">E-mail</span><span class="v"><a href="mailto:info@vennhypotheken.nl">info@vennhypotheken.nl</a></span></div>
+  </div>
+  <div class="card">
+    <h3><span class="ic">🛟</span>Helpdesk — Team Venn bij Stater</h3>
+    <p class="note">Behandeling van alle hypotheekaanvragen (acceptatie/midoffice).</p>
+    <div class="kv"><span class="k">Telefoon</span><span class="v"><a href="tel:+31334509654">033 - 450 96 54</a></span></div>
+    <div class="kv"><span class="k">E-mail</span><span class="v"><a href="mailto:teamvenn@stater.nl">teamvenn@stater.nl</a></span></div>
+  </div>
+  <div class="card full">
+    <h3><span class="ic">💬</span>Venn Vraagbaak</h3>
+    <p class="lead">Voor inhoudelijke vragen, voorbesprekingen en verzoeken: senior acceptanten van Venn Hypotheken zelf (niet van Stater).</p>
+    <p class="note"><strong>Vragen · Voorbespreken · Verzoeken · Verifiëren</strong> — Miranda Verhoef en Maureen Bouwer</p>
+    <div class="kv"><span class="k">Telefoon</span><span class="v"><a href="tel:+31763033901">076 - 30 33 901</a></span></div>
+    <div class="kv"><span class="k">E-mail</span><span class="v"><a href="mailto:vraagbaak@vennhypotheken.nl">vraagbaak@vennhypotheken.nl</a></span></div>
+  </div>
+  <div class="card full">
+    <h3><span class="ic">👥</span>Accountmanager — ASN Franchisekantoren</h3>
+    <div class="am">
+      <div class="region">Manager Distributie · aanspreekpunt voor alle kantoren</div>
+      <div class="am-name">Pascale Prins</div>
+      <div class="am-c"><span>📞 <a href="tel:+31763033906">076 - 30 33 906</a></span><span>📱 <a href="tel:+31611928625">06 119 286 25</a></span><span>✉️ <a href="mailto:pascale.prins@vennhypotheken.nl">pascale.prins@vennhypotheken.nl</a></span></div>
+    </div>
+  </div>
+  <div class="card full">
+    <h3><span class="ic">📄</span>Actuele productinformatie</h3>
+    <p class="lead">Productkaart en Kredietgids (acceptatiebeleid, voorwaarden, formulieren): <a href="https://www.vennhypotheken.nl/adviseurs/handige-documenten" target="_blank" rel="noopener">Handige documenten – Venn Hypotheken</a></p>
+  </div>
 </div>
 
     </section>
