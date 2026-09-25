@@ -156,12 +156,25 @@ display:flex;align-items:center;justify-content:center;font-size:13px;color:var(
 .elearning-item .txt{display:flex;flex-direction:column;gap:2px}
 .elearning-item .pw{font-size:12px;font-weight:600;color:var(--muted)}
 .elearning-item .pw strong{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--ink)}
+.tr-cat{margin:26px 0 10px;font-size:16px;font-weight:800;color:var(--ink)}
+.tr-cat:first-of-type{margin-top:14px}
+.tr-tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);background:var(--card)}
+table.tr-table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+table.tr-table th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.tr-table td{padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.tr-table tr:last-child td{border-bottom:0}
+table.tr-table tbody tr:hover td{background:#f8fafc}
+table.tr-table td a{color:var(--accent);font-weight:700;text-decoration:none}
+table.tr-table td a:hover{text-decoration:underline}
 </style></head>
 <body>
 <div class="wrap">
   <div class="maintabs">
     <button class="maintab active" id="tab-basis-btn" onclick="showMainTab('basis')" type="button">Geldverstrekkers</button>
     <button class="maintab" id="tab-elearning-btn" onclick="showMainTab('elearning')" type="button">E-learning</button>
+    <button class="maintab" id="tab-trainingsdata-btn" onclick="showMainTab('trainingsdata')" type="button">Trainingsdata</button>
+    <button class="maintab" id="tab-vragenuurtje-btn" onclick="showMainTab('vragenuurtje')" type="button">Vragenuurtje Hypotheekadvies</button>
   </div>
   <div id="overview">
     <header class="tophero">
@@ -1534,6 +1547,153 @@ display:flex;align-items:center;justify-content:center;font-size:13px;color:var(
     </div>
   </div>
 
+  <div id="trainingsdata" style="display:none">
+    <header class="tophero">
+      <div class="htxt">
+        <p class="eyebrow">Voor adviseurs</p>
+        <h1>Trainingsdata</h1>
+        <p>Overzicht van de klassikale en online trainingen. Ontvangst 9.00 uur – aanvang 9.30 tot 16.30 uur (bij fysieke trainingen).</p>
+      </div>
+    </header>
+
+    <div class="tr-cat">eBlinqx Connect – CRM hypotheken en verzekeringen</div>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Locatie</th><th>Tijdstip</th><th>Trainer</th></tr></thead>
+        <tbody>
+          <tr><td>Maandag 28 september</td><td>Hotel Rosveld, Nederweert</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Jeroen</td></tr>
+          <tr><td>Woensdag 30 september</td><td>Van der Valk Tilburg</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Jeroen</td></tr>
+          <tr><td>Donderdag 1 oktober</td><td>Van der Valk Apeldoorn</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Simon &amp; Peter</td></tr>
+          <tr><td>Donderdag 1 oktober</td><td>Van der Valk Enschede</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Joost</td></tr>
+          <tr><td>Donderdag 1 oktober</td><td>Van der Valk Ridderkerk</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Anish</td></tr>
+          <tr><td>Maandag 5 oktober</td><td>Van der Valk Assen</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Mayra &amp; Dirk</td></tr>
+          <tr><td>Maandag 5 oktober</td><td>Van der Valk Venlo</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Jeroen</td></tr>
+          <tr><td>Dinsdag 6 oktober</td><td>Van der Valk Almere</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Mayra &amp; Dirk</td></tr>
+          <tr><td>Dinsdag 6 oktober</td><td>Van der Valk De Bilt</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Simon</td></tr>
+          <tr><td>Dinsdag 6 oktober</td><td>Van der Valk Duiven</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Joost</td></tr>
+          <tr><td>Donderdag 8 oktober</td><td>Van der Valk Haarlem</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Anish</td></tr>
+          <tr><td>Maandag 12 oktober</td><td>Van der Valk Delft</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Peter &amp; Dirk</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tr-cat">eBlinqx Hypotheekadvies</div>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Locatie</th><th>Tijdstip</th><th>Trainer</th></tr></thead>
+        <tbody>
+          <tr><td>Dinsdag 29 september</td><td>Hotel Rosveld, Nederweert</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Jochem</td></tr>
+          <tr><td>Donderdag 1 oktober</td><td>Van der Valk Tilburg</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Niels</td></tr>
+          <tr><td>Vrijdag 2 oktober</td><td>Van der Valk Apeldoorn</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Niels</td></tr>
+          <tr><td>Vrijdag 2 oktober</td><td>Van der Valk Enschede</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Jochem</td></tr>
+          <tr><td>Maandag 5 oktober</td><td>Van der Valk Ridderkerk</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Niels</td></tr>
+          <tr><td>Dinsdag 6 oktober</td><td>Van der Valk Assen</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Jochem</td></tr>
+          <tr><td>Dinsdag 6 oktober</td><td>Van der Valk Venlo</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Niels</td></tr>
+          <tr><td>Woensdag 7 oktober</td><td>Van der Valk De Bilt</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Niels</td></tr>
+          <tr><td>Woensdag 7 oktober</td><td>Van der Valk Duiven</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Jochem</td></tr>
+          <tr><td>Vrijdag 9 oktober</td><td>Van der Valk Akersloot</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Niels</td></tr>
+          <tr><td>Vrijdag 9 oktober</td><td>Van der Valk Almere</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Dirk</td></tr>
+          <tr><td>Dinsdag 13 oktober</td><td>Van der Valk Delft</td><td>Ontvangst 9.00 &ndash; aanvang 9.30&ndash;16.30 uur</td><td>Niels</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tr-cat">eBlinqx Connect – CRM bankzaken en verzekeringen (online)</div>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Locatie</th><th>Tijdstip</th><th>Trainer</th></tr></thead>
+        <tbody>
+          <tr><td>Online 1 &middot; maandag 28 september</td><td>Online (Teams)</td><td>9.00&ndash;12.00 uur</td><td>Jaco</td></tr>
+          <tr><td>Online 2 &middot; maandag 5 oktober</td><td>Online (Teams)</td><td>9.00&ndash;12.00 uur</td><td>Jan Maarten</td></tr>
+          <tr><td>Online 3 &middot; maandag 12 oktober</td><td>Online (Teams)</td><td>9.00&ndash;12.00 uur</td><td>Erwin</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tr-cat">Inhaalsessies eBlinqx Connect &ndash; CRM bankzaken en verzekeringen</div>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Locatie</th><th>Tijdstip</th><th>Trainer</th></tr></thead>
+        <tbody>
+          <tr><td>Inhaalsessie 1 &middot; maandag 19 oktober</td><td>Online (Teams)</td><td>9.00&ndash;12.00 uur</td><td>Jaco</td></tr>
+          <tr><td>Inhaalsessie 2 &middot; maandag 26 oktober</td><td>Online (Teams)</td><td>9.00&ndash;12.00 uur</td><td>Jan Maarten</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tr-cat">Terugkomtrainingen &ldquo;Eigen dossier mee&rdquo;</div>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Locatie</th><th>Tijdstip</th><th>Trainer</th></tr></thead>
+        <tbody>
+          <tr><td>Woensdag 21 oktober</td><td>DFO BV, Hoevelaken</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Jochem &amp; Niels</td></tr>
+          <tr><td>Maandag 26 oktober</td><td>Van der Valk Hotel &lsquo;s-Hertogenbosch - Vught</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Jochem &amp; Niels</td></tr>
+          <tr><td>Woensdag 28 oktober</td><td>Van der Valk Hotel Akersloot / A9 Alkmaar</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Jochem &amp; Niels</td></tr>
+          <tr><td>Maandag 2 november</td><td>Van der Valk Hotel Dordrecht</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Jochem &amp; Niels</td></tr>
+          <tr><td>Woensdag 4 november</td><td>Hotel Rosveld, Nederweert</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Jochem &amp; Niels</td></tr>
+          <tr><td>Maandag 9 november</td><td>Van der Valk Hotel Assen</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Jochem &amp; Niels</td></tr>
+          <tr><td>Woensdag 11 november</td><td>Van der Valk Hotel Enschede</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Jochem &amp; Niels</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tr-cat">Casu&iuml;stiekmiddagen</div>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Locatie</th><th>Tijdstip</th><th>Trainer</th></tr></thead>
+        <tbody>
+          <tr><td>Maandag 16 november</td><td>Hotel Rosveld, Nederweert</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Erik &amp; Niels</td></tr>
+          <tr><td>Woensdag 18 november</td><td>Van der Valk Hotel Enschede</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Erik &amp; Jochem</td></tr>
+          <tr><td>Maandag 23 november</td><td>Van der Valk Hotel Akersloot / A9 Alkmaar</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Erik &amp; Niels</td></tr>
+          <tr><td>Woensdag 25 november</td><td>Van der Valk Hotel Assen</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Erik &amp; Jochem</td></tr>
+          <tr><td>Donderdag 3 december</td><td>Van der Valk Hotel Dordrecht</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Erik &amp; Niels</td></tr>
+          <tr><td>Maandag 7 december</td><td>Van der Valk Hotel &lsquo;s-Hertogenbosch - Vught</td><td>Ontvangst 12.15 uur met lunch &ndash; 13.00&ndash;16.30 uur</td><td>Erik &amp; Jochem</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="vragenuurtje" style="display:none">
+    <header class="tophero">
+      <div class="htxt">
+        <p class="eyebrow">Voor adviseurs</p>
+        <h1>Vragenuurtje Hypotheekadvies</h1>
+        <p>Vragenuurtje hypotheekadvies ASN &ndash; blinqx. Elke sessie duurt van 09.00 tot 10.00 uur.</p>
+      </div>
+    </header>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Tijdstip</th><th>Trainer</th><th>Teamslink</th></tr></thead>
+        <tbody>
+          <tr><td>Woensdag 30 september</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/316412491208141?p=vm81WgTowULEvv5YBI" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Maandag 5 oktober</td><td>09.00&ndash;10.00 uur</td><td>Jochem</td><td><a href="https://teams.microsoft.com/meet/386132900566268?p=tczIkHysGMp2ZVi1aF" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 9 oktober</td><td>09.00&ndash;10.00 uur</td><td>Erik</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 13 oktober</td><td>09.00&ndash;10.00 uur</td><td>Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 16 oktober</td><td>09.00&ndash;10.00 uur</td><td>Niels</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 20 oktober</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 23 oktober</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 27 oktober</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 30 oktober</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 3 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 6 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 10 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 13 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 17 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 20 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 24 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 27 november</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 1 december</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 4 december</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 8 december</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 11 december</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 15 december</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 18 december</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 22 december</td><td>09.00&ndash;10.00 uur</td><td>Niels &amp; Jochem</td><td><a href="https://teams.microsoft.com/meet/344748622772414?p=y2GHfHlo5X32T0vFVN" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <p class="foot">Geldverstrekkersinformatie · uitsluitend voor adviseurs · 38 geldverstrekkers</p>
 </div>
 <script>
@@ -1565,17 +1725,30 @@ function filterTiles(){
   document.getElementById('count').textContent=n+' van '+tiles.length;
 }
 function showMainTab(tab){
-  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn');
-  var elDiv=document.getElementById('elearning');
+  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn');
+  var elDiv=document.getElementById('elearning'), trDiv=document.getElementById('trainingsdata'), vuDiv=document.getElementById('vragenuurtje');
+  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none';
+  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active');
   if(tab==='elearning'){
     document.getElementById('overview').style.display='none';
     document.getElementById('detail').style.display='none';
     elDiv.style.display='block';
-    basisBtn.classList.remove('active'); elBtn.classList.add('active');
+    elBtn.classList.add('active');
     try{history.replaceState(null,'','#elearning');}catch(e){}
+  } else if(tab==='trainingsdata'){
+    document.getElementById('overview').style.display='none';
+    document.getElementById('detail').style.display='none';
+    trDiv.style.display='block';
+    trBtn.classList.add('active');
+    try{history.replaceState(null,'','#trainingsdata');}catch(e){}
+  } else if(tab==='vragenuurtje'){
+    document.getElementById('overview').style.display='none';
+    document.getElementById('detail').style.display='none';
+    vuDiv.style.display='block';
+    vuBtn.classList.add('active');
+    try{history.replaceState(null,'','#vragenuurtje');}catch(e){}
   } else {
-    elDiv.style.display='none';
-    elBtn.classList.remove('active'); basisBtn.classList.add('active');
+    basisBtn.classList.add('active');
     showOverview();
   }
   window.scrollTo(0,0);
@@ -1584,6 +1757,8 @@ function showMainTab(tab){
   filterTiles();
   var h=(location.hash||'').replace('#','');
   if(h==='elearning'){showMainTab('elearning');}
+  else if(h==='trainingsdata'){showMainTab('trainingsdata');}
+  else if(h==='vragenuurtje'){showMainTab('vragenuurtje');}
   else if(h && SLUGS.indexOf(h)>-1){showLender(h);}
 })();
 </script>
