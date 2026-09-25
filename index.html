@@ -17,7 +17,7 @@ html{-webkit-text-size-adjust:100%}button{font:inherit;color:inherit;-webkit-tap
 .kv .v{flex:1 1 auto;min-width:0}
 
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:1080px;margin:0 auto;padding:22px 18px 48px}
 a{color:var(--accent);text-decoration:none;font-weight:600}a:hover{text-decoration:underline}
 .tophero{background:linear-gradient(135deg,#12151a,#232a33);border-radius:var(--radius);
@@ -138,11 +138,13 @@ padding:10px 16px;border-radius:10px;margin-top:6px}.cta:hover{filter:brightness
   .overig-btn .sub{display:none}
 }
 @media(max-width:380px){.grid{grid-template-columns:1fr 1fr;gap:8px}.tile .go .nm{font-size:11.5px}}
-.maintabs{display:flex;gap:8px;margin:0 0 18px;border-bottom:1px solid var(--line)}
+.maintabs{display:flex;gap:8px;margin:0 0 18px;border-bottom:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.maintabs::-webkit-scrollbar{display:none}
 .maintab{background:none;border:0;padding:12px 4px;margin-right:20px;font-size:15px;font-weight:700;
-color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;flex:0 0 auto;white-space:nowrap}
 .maintab.active{color:var(--ink);border-bottom-color:var(--accent)}
 .maintab:hover{color:var(--ink)}
+@media(max-width:640px){.maintab{font-size:13.5px;padding:10px 2px;margin-right:14px}}
 .elearning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
 @media(max-width:640px){.elearning-grid{grid-template-columns:1fr}}
 .elearning-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
