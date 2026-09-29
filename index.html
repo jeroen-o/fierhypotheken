@@ -170,6 +170,16 @@ table.tr-table tr:last-child td{border-bottom:0}
 table.tr-table tbody tr:hover td{background:#f8fafc}
 table.tr-table td a{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap}
 table.tr-table td a:hover{text-decoration:underline}
+.hd-intro{font-size:15px;color:var(--muted);margin:0 0 4px}
+.hd-steps{display:flex;flex-direction:column;gap:10px;margin:0 0 8px}
+.hd-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.hd-step .num{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;
+font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.hd-step .body strong{display:block;font-size:14px;color:var(--ink);margin-bottom:2px}
+.hd-step .body span{font-size:13.5px;color:var(--muted)}
+.hd-track{margin:26px 0 10px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.hd-track:first-of-type{margin-top:14px}
 </style></head>
 <body>
 <div class="wrap">
@@ -178,6 +188,7 @@ table.tr-table td a:hover{text-decoration:underline}
     <button class="maintab" id="tab-elearning-btn" onclick="showMainTab('elearning')" type="button">E-learning</button>
     <button class="maintab" id="tab-trainingsdata-btn" onclick="showMainTab('trainingsdata')" type="button">Trainingsdata</button>
     <button class="maintab" id="tab-vragenuurtje-btn" onclick="showMainTab('vragenuurtje')" type="button">Vragenuurtje Hypotheekadvies</button>
+    <button class="maintab" id="tab-helpdesk-btn" onclick="showMainTab('helpdesk')" type="button">Helpdesk Blinqx CRM en Advies</button>
   </div>
   <div id="overview">
     <header class="tophero">
@@ -1707,6 +1718,43 @@ table.tr-table td a:hover{text-decoration:underline}
     </div>
   </div>
 
+  <div id="helpdesk" style="display:none">
+    <header class="tophero">
+      <div class="htxt">
+        <p class="eyebrow">Voor adviseurs</p>
+        <h1>Helpdesk Blinqx CRM en Advies</h1>
+        <p>ASN Support eBlinqx Connect &amp; Hypotheekadvies. Zelf ontdekken en samen leren en verbeteren &ndash; inzet interne kennis en hulp.</p>
+      </div>
+    </header>
+
+    <div class="hd-track">Route van vraag naar antwoord</div>
+    <div class="hd-steps">
+      <div class="hd-step"><div class="num">1</div><div class="body"><strong>Fin AI</strong><span>Stel altijd eerst de vraag aan Fin AI voor een eerste antwoord. Wat is de situatie en wat lukt niet of is anders dan verwacht?</span></div></div>
+      <div class="hd-step"><div class="num">2</div><div class="body"><strong>Super user</strong><span>Vraag hulp aan een interne super user om antwoord te krijgen, door een volledige hulpvraag voor te leggen.</span></div></div>
+      <div class="hd-step"><div class="num">3</div><div class="body"><strong>Fin AI (toetsen)</strong><span>Toets je verbeterde hulpvraag bij Fin AI om een antwoord te krijgen en of dit volledig en werkbaar is.</span></div></div>
+      <div class="hd-step"><div class="num">4</div><div class="body"><strong>Blinqx Support via Fin AI</strong><span>Stel je vraag aan Blinqx via Fin AI, zodat de volledige vraagstelling bekend is, inclusief situatie en documentatie.</span></div></div>
+    </div>
+
+    <div class="hd-track">Welke stappen eerst en welke contactvormen</div>
+    <div class="hd-steps">
+      <div class="hd-step"><div class="num">1</div><div class="body"><strong>Altijd als eerste &middot; Fin AI</strong><span>Fin AI weet al veel antwoorden en kan je helpen verder te komen. Hulp bij instellen of hoe iets werkt, advies over opzet aanvraag of verwerking, of algemene hulp en uitleg.</span></div></div>
+      <div class="hd-step"><div class="num">2a</div><div class="body"><strong>Direct hulp niet urgent &middot; Blinqx Self Service &ndash; Fin AI</strong><span>Stel je vraag aan Fin AI en dien je vraag in via Fin aan support. Hierdoor stuur je ook direct relevante data en berekeningen door.</span></div></div>
+      <div class="hd-step"><div class="num">2b</div><div class="body"><strong>Direct hulp niet urgent &middot; Blinqx Self Service &ndash; E-mail</strong><span>Stuur een e-mail naar Blinqx Support voor hulp. Heldere, duidelijke vraag inclusief bijlagen en relevante informatie.</span></div></div>
+      <div class="hd-step"><div class="num">3</div><div class="body"><strong>Direct hulp wel urgent &middot; Blinqx Support medewerker &ndash; Telefoon</strong><span>Echt urgent? Systeem crash, aanvraag vastgelopen, klant ter plaatse aanwezig? Bel Blinqx support op het relevante nummer en leg je vraag helder en duidelijk uit. We proberen direct je probleem op te lossen.</span></div></div>
+    </div>
+
+    <div class="hd-track">Contactgegevens</div>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Onderwerp</th><th>E-mail</th><th>Telefoon</th></tr></thead>
+        <tbody>
+          <tr><td>eBlinqx Connect</td><td><a href="mailto:support-eblinqx@blinqx.tech">support-eblinqx@blinqx.tech</a></td><td>+31 (0)85-1060612 (toets 1 en 2)</td></tr>
+          <tr><td>Hypotheekadvies (Fastlane)</td><td><a href="mailto:support-hypotheekadvies@blinqx.tech">support-hypotheekadvies@blinqx.tech</a></td><td>+31 (0)85-1060612 (toets 1 en 1)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <p class="foot">Geldverstrekkersinformatie · uitsluitend voor adviseurs · 38 geldverstrekkers</p>
 </div>
 <script>
@@ -1738,10 +1786,10 @@ function filterTiles(){
   document.getElementById('count').textContent=n+' van '+tiles.length;
 }
 function showMainTab(tab){
-  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn');
-  var elDiv=document.getElementById('elearning'), trDiv=document.getElementById('trainingsdata'), vuDiv=document.getElementById('vragenuurtje');
-  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none';
-  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active');
+  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn'), hdBtn=document.getElementById('tab-helpdesk-btn');
+  var elDiv=document.getElementById('elearning'), trDiv=document.getElementById('trainingsdata'), vuDiv=document.getElementById('vragenuurtje'), hdDiv=document.getElementById('helpdesk');
+  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none'; hdDiv.style.display='none';
+  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active'); hdBtn.classList.remove('active');
   if(tab==='elearning'){
     document.getElementById('overview').style.display='none';
     document.getElementById('detail').style.display='none';
@@ -1760,6 +1808,12 @@ function showMainTab(tab){
     vuDiv.style.display='block';
     vuBtn.classList.add('active');
     try{history.replaceState(null,'','#vragenuurtje');}catch(e){}
+  } else if(tab==='helpdesk'){
+    document.getElementById('overview').style.display='none';
+    document.getElementById('detail').style.display='none';
+    hdDiv.style.display='block';
+    hdBtn.classList.add('active');
+    try{history.replaceState(null,'','#helpdesk');}catch(e){}
   } else {
     basisBtn.classList.add('active');
     showOverview();
@@ -1772,6 +1826,7 @@ function showMainTab(tab){
   if(h==='elearning'){showMainTab('elearning');}
   else if(h==='trainingsdata'){showMainTab('trainingsdata');}
   else if(h==='vragenuurtje'){showMainTab('vragenuurtje');}
+  else if(h==='helpdesk'){showMainTab('helpdesk');}
   else if(h && SLUGS.indexOf(h)>-1){showLender(h);}
 })();
 </script>
