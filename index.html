@@ -277,6 +277,7 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <button class="maintab" id="tab-elearning-btn" onclick="showMainTab('elearning')" type="button">E-learning</button>
     <button class="maintab" id="tab-trainingsdata-btn" onclick="showMainTab('trainingsdata')" type="button">Trainingsdata</button>
     <button class="maintab" id="tab-vragenuurtje-btn" onclick="showMainTab('vragenuurtje')" type="button">Vragenuurtje Hypotheekadvies</button>
+    <button class="maintab" id="tab-vragenuurtjecrm-btn" onclick="showMainTab('vragenuurtjecrm')" type="button">Vragenuurtje Connect CRM</button>
     <button class="maintab" id="tab-helpdesk-btn" onclick="showMainTab('helpdesk')" type="button">Helpdesk Blinqx CRM en Advies</button>
     <button class="maintab" id="tab-aiassistent-btn" onclick="showMainTab('aiassistent')" type="button">Blinqx AI Assistent</button>
   </div>
@@ -2106,6 +2107,35 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     </div>
   </div>
 
+  <div id="vragenuurtjecrm" style="display:none">
+    <header class="tophero">
+      <div class="htxt">
+        <p class="eyebrow">Voor adviseurs</p>
+        <h1>Vragenuurtje Connect CRM</h1>
+        <p>Online vragenuurtje eBlinqx Connect CRM ASN &ndash; Blinqx. Elke sessie duurt van 10.00 tot 11.00 uur via Microsoft Teams.</p>
+      </div>
+    </header>
+    <div class="tr-tablewrap">
+      <table class="tr-table">
+        <thead><tr><th>Datum</th><th>Tijdstip</th><th>Trainer</th><th>Teamslink</th></tr></thead>
+        <tbody>
+          <tr><td>Donderdag 15 oktober</td><td>10.00&ndash;11.00 uur</td><td>M &amp; S</td><td><a href="https://teams.microsoft.com/meet/3447111904503439?p=hYX5ZCTdONk0QoDyjr" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Maandag 19 oktober</td><td>10.00&ndash;11.00 uur</td><td>M &amp; J</td><td><a href="https://teams.microsoft.com/meet/395154202369193?p=PoyITPouV6kHF72X8E" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Donderdag 22 oktober</td><td>10.00&ndash;11.00 uur</td><td>M &amp; S</td><td><a href="https://teams.microsoft.com/meet/3339358382696249?p=mZjHehLShG2uQ0IYO3" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 27 oktober</td><td>10.00&ndash;11.00 uur</td><td>S &amp; J</td><td><a href="https://teams.microsoft.com/meet/3910190644008424?p=IATb6jUznXTtygSEZX" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Vrijdag 30 oktober</td><td>10.00&ndash;11.00 uur</td><td>M &amp; MH</td><td><a href="https://teams.microsoft.com/meet/3777109172367041?p=f3V0otMJ4YatKMEHQz" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Woensdag 4 november</td><td>10.00&ndash;11.00 uur</td><td>M &amp; J</td><td><a href="https://teams.microsoft.com/meet/3284061764876505?p=T0XHvzzVEB7k4PdYfj" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Donderdag 12 november</td><td>10.00&ndash;11.00 uur</td><td>S &amp; MH</td><td><a href="https://teams.microsoft.com/meet/3836973715030948?p=7Q1XkHtfXTTmOARgKZ" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 17 november</td><td>10.00&ndash;11.00 uur</td><td>M &amp; S</td><td><a href="https://teams.microsoft.com/meet/3536567069488795?p=aZJ8tqoaHpuR5rp3Ag" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Woensdag 25 november</td><td>10.00&ndash;11.00 uur</td><td>M &amp; S</td><td><a href="https://teams.microsoft.com/meet/311882607770842?p=ndSWXeIBvmzOVRpDv0" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Donderdag 3 december</td><td>10.00&ndash;11.00 uur</td><td>M &amp; S</td><td><a href="https://teams.microsoft.com/meet/367040965880067?p=seyO3oqUkmp5UdDng5" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Woensdag 9 december</td><td>10.00&ndash;11.00 uur</td><td>M &amp; S</td><td><a href="https://teams.microsoft.com/meet/369837469966901?p=Z67PavWpB1PkLqevrq" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+          <tr><td>Dinsdag 15 december</td><td>10.00&ndash;11.00 uur</td><td>M &amp; S</td><td><a href="https://teams.microsoft.com/meet/3855651992250462?p=ViQYq8kgBiScBfCQQI" target="_blank" rel="noopener">Openen &rarr;</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <div id="helpdesk" style="display:none">
     <header class="tophero">
       <div class="htxt">
@@ -2395,10 +2425,10 @@ function filterTiles(){
   document.getElementById('count').textContent=n+' van '+tiles.length;
 }
 function showMainTab(tab){
-  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn'), hdBtn=document.getElementById('tab-helpdesk-btn'); var aiBtn=document.getElementById('tab-aiassistent-btn'), aiDiv=document.getElementById('aiassistent');
+  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn'), hdBtn=document.getElementById('tab-helpdesk-btn'); var aiBtn=document.getElementById('tab-aiassistent-btn'), aiDiv=document.getElementById('aiassistent'); var vcBtn=document.getElementById('tab-vragenuurtjecrm-btn'), vcDiv=document.getElementById('vragenuurtjecrm');
   var elDiv=document.getElementById('elearning'), trDiv=document.getElementById('trainingsdata'), vuDiv=document.getElementById('vragenuurtje'), hdDiv=document.getElementById('helpdesk');
-  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none'; hdDiv.style.display='none'; aiDiv.style.display='none';
-  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active'); hdBtn.classList.remove('active'); aiBtn.classList.remove('active');
+  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none'; hdDiv.style.display='none'; aiDiv.style.display='none'; vcDiv.style.display='none';
+  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active'); hdBtn.classList.remove('active'); aiBtn.classList.remove('active'); vcBtn.classList.remove('active');
   if(tab==='elearning'){
     document.getElementById('overview').style.display='none';
     document.getElementById('detail').style.display='none';
@@ -2423,6 +2453,12 @@ function showMainTab(tab){
     hdDiv.style.display='block';
     hdBtn.classList.add('active');
     try{history.replaceState(null,'','#helpdesk');}catch(e){}
+  } else if(tab==='vragenuurtjecrm'){
+    document.getElementById('overview').style.display='none';
+    document.getElementById('detail').style.display='none';
+    vcDiv.style.display='block';
+    vcBtn.classList.add('active');
+    try{history.replaceState(null,'','#vragenuurtjecrm');}catch(e){}
   } else if(tab==='aiassistent'){
     document.getElementById('overview').style.display='none';
     document.getElementById('detail').style.display='none';
@@ -2441,6 +2477,7 @@ function showMainTab(tab){
   if(h==='elearning'){showMainTab('elearning');}
   else if(h==='trainingsdata'){showMainTab('trainingsdata');}
   else if(h==='vragenuurtje'){showMainTab('vragenuurtje');}
+  else if(h==='vragenuurtjecrm'){showMainTab('vragenuurtjecrm');}
   else if(h==='helpdesk'){showMainTab('helpdesk');}
   else if(h==='aiassistent'||h==='fin'){showMainTab('aiassistent');}
   else if(h && SLUGS.indexOf(h)>-1){showLender(h);}
