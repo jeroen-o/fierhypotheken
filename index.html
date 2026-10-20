@@ -171,6 +171,25 @@ table.tr-table tr:last-child td{border-bottom:0}
 table.tr-table tbody tr:hover td{background:#f8fafc}
 table.tr-table td a{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap}
 table.tr-table td a:hover{text-decoration:underline}
+.cs-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow);margin:0 0 12px}
+.cs-card p{margin:0 0 10px;font-size:15px}.cs-card p:last-child{margin-bottom:0}
+.cs-card h3{margin:0 0 8px;font-size:16px}.cs-card ul{margin:0;padding-left:20px;font-size:15px}.cs-card li{margin:3px 0}
+.cs-story{margin-top:16px}
+.cs-wish{border-top:4px solid var(--accent)}
+.cs-fase{margin:26px 0 4px;font-size:20px;font-weight:800;color:var(--ink)}
+.cs-fase span{display:inline-block;background:#12151a;color:#fff;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-right:8px;vertical-align:3px}
+.cs-hint{font-size:14px;color:var(--muted);margin:-4px 0 10px}
+table.cs-table{width:100%;border-collapse:collapse;font-size:14px}
+table.cs-table th,table.cs-table td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.cs-table tbody th{font-weight:600;color:var(--muted);width:40%}
+table.cs-table.cs-3 tbody th{width:34%}
+table.cs-table thead th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+table.cs-table thead th+th{color:var(--ink)}
+table.cs-table tr:last-child td,table.cs-table tr:last-child th{border-bottom:0}
+table.cs-table em{color:var(--muted)}
+.cs-tag{display:inline-block;background:#fff4c2;color:#7a5b00;font-size:11.5px;font-weight:800;padding:1px 8px;border-radius:10px;margin-left:6px}
+.cs-ver{font-size:12.5px;color:var(--muted);margin:22px 0 0}
+@media(max-width:640px){table.cs-table{font-size:13px}table.cs-table th,table.cs-table td{padding:9px 10px}table.cs-table.cs-3 tbody th{width:30%}}
 .hd-intro{font-size:15px;color:var(--muted);margin:0 0 4px}
 .hd-steps{display:flex;flex-direction:column;gap:10px;margin:0 0 8px}
 .hd-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
@@ -280,6 +299,7 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <button class="maintab" id="tab-vragenuurtjecrm-btn" onclick="showMainTab('vragenuurtjecrm')" type="button">Vragenuurtje Connect CRM</button>
     <button class="maintab" id="tab-helpdesk-btn" onclick="showMainTab('helpdesk')" type="button">Helpdesk Blinqx CRM en Advies</button>
     <button class="maintab" id="tab-aiassistent-btn" onclick="showMainTab('aiassistent')" type="button">Blinqx AI Assistent</button>
+    <button class="maintab" id="tab-casus-btn" onclick="showMainTab('casus')" type="button">Casus Rob &amp; Marloes</button>
   </div>
   <div id="overview">
     <header class="tophero">
@@ -2290,6 +2310,149 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     </div>
   </div>
 
+  <div id="casus" style="display:none">
+    <header class="tophero">
+      <div class="htxt">
+        <p class="eyebrow">Terugkomdag &middot; neem je eigen dossier mee</p>
+        <h1>Casus: Rob &amp; Marloes kopen samen</h1>
+        <p>Oefencasus eBlinqx Hypotheekadvies. Alle gegevens zijn fictief. Voer de casus tijdens de training stap voor stap in eBlinqx in.</p>
+      </div>
+    </header>
+
+    <div class="cs-card cs-story">
+      <p>Rob en Marloes zijn in 2018 gaan samenwonen in de huurwoning van Rob. Op 1 januari 2020 (levering) hebben ze als starters samen een woning gekocht in Leidschendam. Die woning hebben ze gefinancierd met een annu&iuml;teitenhypotheek bij Obvion, met een totale hoofdsom van &euro;&nbsp;250.000. Ze hebben direct bij de notaris een samenlevingscontract en een testament laten vastleggen.</p>
+      <p>Rob en Marloes gaan doorstromen. Ze hebben een woning gekocht in Den Haag, postcode 2544 ND, huisnummer 31 (50%/50%), met een koopsom van &euro;&nbsp;850.000 en een marktwaarde van &euro;&nbsp;850.000. Oplevering: 03-10-2026.</p>
+      <p>De huidige woning in Leidschendam is definitief verkocht aan vrienden, zonder tussenkomst van een verkopend makelaar, voor &euro;&nbsp;550.000. Oplevering: 01-09-2026.</p>
+    </div>
+
+    <div class="cs-card cs-wish">
+      <h3>Wensen van Rob en Marloes</h3>
+      <ul>
+        <li>Het te realiseren vervreemdingssaldo volledig inbrengen</li>
+        <li>Rob wil &euro;&nbsp;30.000 eigen middelen inbrengen op zijn deel van de financiering</li>
+        <li>Marloes wil &euro;&nbsp;5.000 eigen middelen inbrengen op haar deel van de financiering</li>
+      </ul>
+    </div>
+
+    <div class="cs-fase"><span>Fase 1</span> Inventarisatie</div>
+
+    <div class="tr-cat">1.1 Samenstelling huishouden</div>
+    <p class="cs-hint">Pas samenlevingsvorm en fiscaal partnerschap aan op de werkelijke situatie.</p>
+    <div class="tr-tablewrap"><table class="cs-table"><tbody>
+      <tr><th>Aantal aanvragers</th><td>2 personen</td></tr>
+      <tr><th>Samenlevingsvorm nu en in de toekomst</th><td>Samenwoners met contract</td></tr>
+      <tr><th>Fiscaal partnerschap</th><td>Ja &mdash; via art. 1.2 lid 1 sub e Wet IB 2001 (gezamenlijke eigen woning en ingeschreven op hetzelfde woonadres)</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">1.2 Klantgegevens</div>
+    <div class="tr-tablewrap"><table class="cs-table cs-3"><thead><tr><th>Persoonsgegeven</th><th>Rob Pieterse</th><th>Marloes Zwaans</th></tr></thead><tbody>
+      <tr><th>Geboortedatum</th><td>01-02-1985</td><td>03-07-1988</td></tr>
+      <tr><th>Geboorteplaats</th><td>Den Haag</td><td>Den Haag</td></tr>
+      <tr><th>Geslacht</th><td>Man</td><td>Vrouw</td></tr>
+      <tr><th>Nationaliteit</th><td>Nederland</td><td>Nederland</td></tr>
+      <tr><th>Legitimatienummer</th><td>1233445</td><td>12345</td></tr>
+      <tr><th>Legitimatie geldig tot</th><td>01-01-2028</td><td>01-01-2028</td></tr>
+      <tr><th>Burgerlijke staat (huidig en toekomstig)</th><td>Samenwonend met contract</td><td>Samenwonend met contract</td></tr>
+      <tr><th>Mobiel</th><td><em>Vul een fictief nummer in</em></td><td><em>Vul een fictief nummer in</em></td></tr>
+      <tr><th>E-mailadres</th><td><em>Vul een fictief mailadres in</em></td><td><em>Vul een fictief mailadres in</em></td></tr>
+      <tr><th>Huidig adres</th><td>De Ruyterstraat 11, 2266 KV Leidschendam</td><td>De Ruyterstraat 11, 2266 KV Leidschendam</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">1.3 Klantprofiel</div>
+    <p class="cs-hint"><strong>Voor beide aanvragers aanmaken.</strong></p>
+
+    <div class="tr-cat">1.4 Fiscaal paspoort</div>
+    <p class="cs-hint"><strong>Is in ontwikkeling en kan voor nu worden overgeslagen.</strong></p>
+
+    <div class="tr-cat">1.5 Woningen &middot; huidige woning</div>
+    <div class="tr-tablewrap"><table class="cs-table"><tbody>
+      <tr><th>Adres</th><td>De Ruyterstraat 11, 2266 KV Leidschendam</td></tr>
+      <tr><th>In eigendom sinds</th><td>01-01-2020</td></tr>
+      <tr><th>Eigenaars</th><td>Gezamenlijk 50%/50%</td></tr>
+      <tr><th>WOZ-waarde</th><td>Per voorgaand jaar</td></tr>
+      <tr><th>Status</th><td>Verkocht voorlopig</td></tr>
+      <tr><th>Verwachte verkoopdatum (transport)</th><td>01-10-2026 <span class="cs-tag">Periodiek aanpassen</span></td></tr>
+      <tr><th>Verwachte verkoopprijs</th><td>&euro;&nbsp;550.000</td></tr>
+      <tr><th>Verwachte verkoopkosten (makelaar + notaris)</th><td>&euro;&nbsp;0</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">1.6 Inkomen</div>
+    <div class="tr-tablewrap"><table class="cs-table cs-3"><thead><tr><th>Omschrijving</th><th>Rob Pieterse</th><th>Marloes Zwaans</th></tr></thead><tbody>
+      <tr><th>Dienstverband</th><td>Loondienst (vast)</td><td>Loondienst (vast)</td></tr>
+      <tr><th>Werkgever</th><td>Pietje Puck Assuranti&euml;n</td><td>Meerdink B.V.</td></tr>
+      <tr><th>Datum in dienst</th><td>01-01-2022</td><td>01-01-2023</td></tr>
+      <tr><th>Bruto jaarinkomen</th><td>&euro;&nbsp;80.000</td><td>&euro;&nbsp;74.000</td></tr>
+      <tr><th>Gemiddeld aantal uren per week</th><td>40</td><td>40</td></tr>
+      <tr><th>Proeftijd</th><td>Nee</td><td>Nee</td></tr>
+      <tr><th>Soort dienstverband</th><td>Loondienst vast</td><td>Loondienst vast</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">1.7 Verplichtingen</div>
+    <p class="cs-hint"><strong>Geen verplichtingen</strong> &mdash; wel benoemen in het dossier.</p>
+
+    <div class="tr-cat">1.8 Werkgeversregelingen &middot; pensioenregeling</div>
+    <div class="tr-tablewrap"><table class="cs-table cs-3"><thead><tr><th>Omschrijving</th><th>Rob Pieterse</th><th>Marloes Zwaans</th></tr></thead><tbody>
+      <tr><th>Pensioenuitvoerder</th><td>Verzekeraar X</td><td>Verzekeraar Y</td></tr>
+      <tr><th>AOW bruto (samenwonerstarief)</th><td>Volledige opbouw</td><td>Volledige opbouw</td></tr>
+      <tr><th>AOW-datum</th><td>01-05-2052</td><td>01-10-2055</td></tr>
+      <tr><th>Ouderdomspensioen (te bereiken)</th><td>&euro;&nbsp;45.000 per jaar</td><td>&euro;&nbsp;38.000 per jaar</td></tr>
+      <tr><th>Nabestaandenpensioen (70% OP), voor en na AOW-datum</th><td>&euro;&nbsp;31.500 per jaar</td><td>&euro;&nbsp;26.600 per jaar</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">Loondoorbetaling bij ziekte</div>
+    <div class="tr-tablewrap"><table class="cs-table cs-3"><thead><tr><th>Omschrijving</th><th>Rob Pieterse</th><th>Marloes Zwaans</th></tr></thead><tbody>
+      <tr><th>Loondoorbetaling jaar 1 ziekte</th><td>100% (gemaximeerd dagloon)</td><td>85% (gemaximeerd dagloon)</td></tr>
+      <tr><th>Loondoorbetaling jaar 2 ziekte</th><td>70% (gemaximeerd dagloon)</td><td>85% (gemaximeerd dagloon)</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">Inkomensverzekering</div>
+    <div class="tr-tablewrap"><table class="cs-table cs-3"><thead><tr><th>Omschrijving</th><th>Rob Pieterse</th><th>Marloes Zwaans</th></tr></thead><tbody>
+      <tr><th>WGA-hiaatverzekering</th><td>Ja &mdash; WGA-hiaat Uitgebreid (Verzekeraar X)</td><td>Nee</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">1.9 Huidige hypotheek</div>
+    <div class="tr-tablewrap"><table class="cs-table"><tbody>
+      <tr><th>Geldverstrekker</th><td>Obvion</td></tr>
+      <tr><th>Product per leningdeel</th><td>Annu&iuml;teiten</td></tr>
+      <tr><th>Hypotheeknummer</th><td>12345</td></tr>
+      <tr><th>Oorspronkelijke hoofdsom</th><td>&euro;&nbsp;250.000</td></tr>
+      <tr><th>Bedrag hypothecaire inschrijving</th><td>&euro;&nbsp;325.000</td></tr>
+      <tr><th>Soort inschrijving</th><td>Bankhypotheek</td></tr>
+      <tr><th>NHG</th><td>Ja</td></tr>
+      <tr><th>Risicoklasse (LTV-tariefklasse)</th><td>Nvt</td></tr>
+      <tr><th>Totale bruto maandlast</th><td>&euro;&nbsp;899,24</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-tablewrap" style="margin-top:12px"><table class="cs-table cs-3"><thead><tr><th>Leningdeel</th><th>/01</th><th>/02</th></tr></thead><tbody>
+      <tr><th>Ingangsdatum</th><td>01-01-2020</td><td>01-01-2020</td></tr>
+      <tr><th>Oorspronkelijke hoofdsom</th><td>&euro;&nbsp;125.000</td><td>&euro;&nbsp;125.000</td></tr>
+      <tr><th>Rente</th><td>1,800%</td><td>1,800%</td></tr>
+      <tr><th>Rentevast</th><td>15 jaar</td><td>15 jaar</td></tr>
+      <tr><th>Einddatum renteaftrek</th><td>01-01-2050</td><td>01-01-2050</td></tr>
+      <tr><th>Einddatum looptijd</th><td>01-01-2050</td><td>01-01-2050</td></tr>
+      <tr><th>Product</th><td>Annu&iuml;tair</td><td>Annu&iuml;tair</td></tr>
+      <tr><th>Regime</th><td>Box 1</td><td>Box 1</td></tr>
+      <tr><th>Fiscaal eigenaar</th><td>Rob Pieterse</td><td>Marloes Zwaans</td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">1.10 Vermogen</div>
+    <div class="tr-tablewrap"><table class="cs-table cs-3"><thead><tr><th>Spaarrekening</th><th>Rob Pieterse</th><th>Marloes Zwaans</th></tr></thead><tbody>
+      <tr><th>Bank</th><td>ABN AMRO</td><td>ABN AMRO</td></tr>
+      <tr><th>Maandelijkse spaarinleg</th><td>&euro;&nbsp;1.250</td><td>&euro;&nbsp;750</td></tr>
+      <tr><th>Huidig saldo spaarrekening</th><td>&euro;&nbsp;100.000</td><td>&euro;&nbsp;75.000</td></tr>
+    </tbody></table></div>
+    <div class="tr-tablewrap" style="margin-top:12px"><table class="cs-table cs-3"><thead><tr><th>Betaalrekening</th><th>Rob Pieterse</th><th>Marloes Zwaans</th></tr></thead><tbody>
+      <tr><th>Bank</th><td>ABN AMRO</td><td>ABN AMRO</td></tr>
+      <tr><th>Rekeningnummer</th><td colspan="2"><em>Gezamenlijke rekening &mdash; verzin een nummer</em></td></tr>
+      <tr><th>Huidig saldo</th><td><em>Verzin een saldo</em></td><td><em>Verzin een saldo</em></td></tr>
+    </tbody></table></div>
+
+    <div class="tr-cat">1.11 Verzekeringen</div>
+    <div class="cs-card"><p>Overlijdensrisicoverzekering (ORV) op het leven van Rob: &euro;&nbsp;100.000, looptijd tot 60 jaar. <strong>Zet het vinkje &lsquo;naar advies meenemen&rsquo; uit.</strong></p></div>
+
+    <p class="cs-ver">Versie juni 2026 &middot; eBlinqx Hypotheekadvies</p>
+  </div>
+
   <div id="aiassistent" style="display:none">
     <header class="tophero">
       <div class="htxt">
@@ -2458,10 +2621,10 @@ function filterTiles(){
   document.getElementById('count').textContent=n+' van '+tiles.length;
 }
 function showMainTab(tab){
-  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn'), hdBtn=document.getElementById('tab-helpdesk-btn'); var aiBtn=document.getElementById('tab-aiassistent-btn'), aiDiv=document.getElementById('aiassistent'); var vcBtn=document.getElementById('tab-vragenuurtjecrm-btn'), vcDiv=document.getElementById('vragenuurtjecrm');
+  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn'), hdBtn=document.getElementById('tab-helpdesk-btn'); var aiBtn=document.getElementById('tab-aiassistent-btn'), aiDiv=document.getElementById('aiassistent'); var vcBtn=document.getElementById('tab-vragenuurtjecrm-btn'), vcDiv=document.getElementById('vragenuurtjecrm'); var csBtn=document.getElementById('tab-casus-btn'), csDiv=document.getElementById('casus');
   var elDiv=document.getElementById('elearning'), trDiv=document.getElementById('trainingsdata'), vuDiv=document.getElementById('vragenuurtje'), hdDiv=document.getElementById('helpdesk');
-  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none'; hdDiv.style.display='none'; aiDiv.style.display='none'; vcDiv.style.display='none';
-  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active'); hdBtn.classList.remove('active'); aiBtn.classList.remove('active'); vcBtn.classList.remove('active');
+  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none'; hdDiv.style.display='none'; aiDiv.style.display='none'; vcDiv.style.display='none'; csDiv.style.display='none';
+  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active'); hdBtn.classList.remove('active'); aiBtn.classList.remove('active'); vcBtn.classList.remove('active'); csBtn.classList.remove('active');
   if(tab==='elearning'){
     document.getElementById('overview').style.display='none';
     document.getElementById('detail').style.display='none';
@@ -2498,6 +2661,12 @@ function showMainTab(tab){
     aiDiv.style.display='block';
     aiBtn.classList.add('active');
     try{history.replaceState(null,'','#aiassistent');}catch(e){}
+  } else if(tab==='casus'){
+    document.getElementById('overview').style.display='none';
+    document.getElementById('detail').style.display='none';
+    csDiv.style.display='block';
+    csBtn.classList.add('active');
+    try{history.replaceState(null,'','#casus');}catch(e){}
   } else {
     basisBtn.classList.add('active');
     showOverview();
@@ -2513,6 +2682,7 @@ function showMainTab(tab){
   else if(h==='vragenuurtjecrm'){showMainTab('vragenuurtjecrm');}
   else if(h==='helpdesk'){showMainTab('helpdesk');}
   else if(h==='aiassistent'||h==='fin'){showMainTab('aiassistent');}
+  else if(h==='casus'){showMainTab('casus');}
   else if(h && SLUGS.indexOf(h)>-1){showLender(h);}
 })();
 document.querySelectorAll('#aiassistent .ai-copy').forEach(function(b){b.addEventListener('click',function(){
