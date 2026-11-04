@@ -198,6 +198,21 @@ table.cs-table em{color:var(--muted)}
 .hd-person .am-c{flex-direction:row}
 .hd-role{font-size:11.5px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
 @media(max-width:640px){.hd-person{align-items:flex-start}.hd-person img{width:60px;height:60px;flex-basis:60px}.hd-person .am-c{flex-direction:column;font-size:13px}.hd-person .am-c span{white-space:nowrap}}
+.act{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.act-h{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;margin:0 0 4px}
+.act-h h3{margin:0;font-size:17px}.act-h .chk{font-size:12px;font-weight:700;color:var(--muted);background:#f1f3f6;border-radius:999px;padding:2px 10px}
+.act-sub{font-size:13px;color:var(--muted);margin:0 0 14px}
+.act-news{margin:0 0 16px;padding:12px 14px;border-left:4px solid var(--accent);background:#f8fafc;border-radius:8px}
+.act-news h4{margin:0 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.act-news ul{list-style:none;margin:0;padding:0}.act-news li{display:flex;gap:12px;font-size:14px;padding:3px 0}
+.act-news time{flex:0 0 108px;color:var(--muted);font-size:13px;white-space:nowrap}
+.act-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}
+.act-grid h4{margin:0 0 5px;font-size:13px;color:var(--ink)}
+.act-grid ul{list-style:none;margin:0;padding:0}.act-grid li{font-size:14px;padding:2px 0;line-height:1.4}
+.act-grid a,.act-news a{font-weight:600;color:var(--accent)}
+.act-empty{font-size:14px;color:var(--muted);margin:0}
+.act-disc{font-size:12px;color:var(--muted);margin:14px 0 0;padding-top:10px;border-top:1px solid var(--line)}
+@media(max-width:640px){.act{padding:14px}.act-grid{grid-template-columns:1fr}.act-news li{flex-direction:column;gap:0}.act-news time{flex-basis:auto}}
 .hd-intro{font-size:15px;color:var(--muted);margin:0 0 4px}
 .hd-steps{display:flex;flex-direction:column;gap:10px;margin:0 0 8px}
 .hd-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
@@ -582,7 +597,17 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-a-s-r">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van a.s.r.: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.asr.nl/adviseur" target="_blank" rel="noopener">a.s.r. voor adviseurs (landingspagina)</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://downloads.asr.nl/pdf/53997.pdf" target="_blank" rel="noopener">Algemene voorwaarden ASR Hypotheek en ZorgeloosThuis (mei 2026)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://downloads.asr.nl/pdf/53880.pdf" target="_blank" rel="noopener">Hypotheekgids a.s.r. mei 2026 (acceptatiecriteria)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.asr.nl/hypotheek/hypotheekrente" target="_blank" rel="noopener">Hypotheekrentetarieven a.s.r.</a></li><li><a href="https://downloads.asr.nl/pdf/asr-renteblad.pdf" target="_blank" rel="noopener">Renteblad hypotheken a.s.r. (pdf)</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-abn-amro" style="--accent:#2f6fed">
       <div class="dhero"><span class="accentbar"></span>
@@ -610,7 +635,17 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-abn-amro">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van ABN AMRO: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://intermediair.abnamro.nl/" target="_blank" rel="noopener">ABN AMRO Intermediair - startpagina</a></li><li><a href="https://intermediair.abnamro.nl/samenwerken-met-abn-amro" target="_blank" rel="noopener">Samenwerken met ABN AMRO (aanstelling aanvragen)</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://intermediair.abnamro.nl/hypotheken" target="_blank" rel="noopener">Hypotheken voor intermediairs</a></li><li><a href="https://intermediair.abnamro.nl/nieuwbouw-bij-abn-amro" target="_blank" rel="noopener">Nieuwbouwhypotheek: mogelijkheden</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://intermediair.abnamro.nl/klantsituaties" target="_blank" rel="noopener">Klantsituaties: mogelijkheden per doelgroep</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://intermediair.abnamro.nl/rente" target="_blank" rel="noopener">Actuele hypotheekrente (intermediair)</a></li><li><a href="https://intermediair.abnamro.nl/intermediairapp" target="_blank" rel="noopener">Intermediair app</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-allianz" style="--accent:#00a37a">
       <div class="dhero"><span class="accentbar"></span>
@@ -653,7 +688,16 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <div class="kv"><span class="k">Formulieren</span><span class="v">Downloads onderaan <a href="https://www.allianz.nl/particulier/hypotheken.html" target="_blank" rel="noopener">De Allianz Hypotheek</a></span></div>
   </div>
 </div>
-
+    <div class="act" id="act-allianz">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Allianz: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.allianz.nl/adviseur.html" target="_blank" rel="noopener">Allianz voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-47.pdf" target="_blank" rel="noopener">Hypotheekwijzer Allianz Hypotheek (versie 2026-04)</a></li><li><a href="https://www.allianz.nl/content/dam/onemarketing/benelu/allianz-nl/local/5/500083-46.pdf" target="_blank" rel="noopener">Algemene voorwaarden Allianz Hypotheek (versie 2025-06)</a></li><li><a href="https://www.allianz.nl/particulier/hypotheken.html" target="_blank" rel="noopener">De Allianz Hypotheek (productpagina)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.allianz.nl/adviseur/bel-ons.html" target="_blank" rel="noopener">Adviseurscontact Allianz: wij helpen graag</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-argenta" style="--accent:#e0662b">
       <div class="dhero"><span class="accentbar"></span>
@@ -679,7 +723,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="lead"><a href="tel:+31765433085">076 - 543 30 85</a></p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="lead"><a href="mailto:hypotheken@argenta.nl">hypotheken@argenta.nl</a></p><p class="note">Team Hypotheken</p></div>
 </div>
-
+    <div class="act" id="act-argenta">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Argenta: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.argenta.nl/adviseur/helpen-met-fijn-wonen" target="_blank" rel="noopener">Argenta voor adviseurs: helpen met fijn wonen</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.argenta.nl/sites/default/files/documents/Argenta_Hypotheekgids.pdf" target="_blank" rel="noopener">Argenta Hypotheekgids (pdf)</a></li><li><a href="https://www.argenta.nl/sites/default/files/documents/Argenta_Adviseurskaart.pdf" target="_blank" rel="noopener">Argenta Adviseurskaart (pdf)</a></li><li><a href="https://www.argenta.nl/sites/default/files/documents/Argenta%20Voorwaarden%20Hypotheek%20juli2025.pdf" target="_blank" rel="noopener">Argenta Voorwaarden Hypotheek juli 2025 (pdf)</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.argenta.nl/adviseur/over-ons/weet-je-dat/onze-nieuwe-regels-voor-aflossingsvrij-lenen" target="_blank" rel="noopener">Weet je dat: Argenta-nieuws (nieuwe regels aflossingsvrij lenen)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.argenta.nl/adviseur/de-doorlooptijden-van-argenta" target="_blank" rel="noopener">Doorlooptijden van Argenta</a></li><li><a href="https://www.argenta.nl/hypotheek-argenta/hypotheekrente-overzicht" target="_blank" rel="noopener">Hypotheekrente-overzicht (rentepagina)</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.argenta.nl/adviseur/documenten-voor-het-aanvragen-of-wijzigen-van-de-argenta-hypotheek" target="_blank" rel="noopener">Documenten voor aanvragen of wijzigen van de hypotheek</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.argenta.nl/adviseur/contact/veelgestelde-vragen/adviseurs" target="_blank" rel="noopener">Veelgestelde vragen en contact voor adviseurs</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-asn-bank" style="--accent:#7c4dff">
       <div class="dhero"><span class="accentbar"></span>
@@ -705,7 +761,18 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-asn-bank">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van ASN Bank: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs.html" target="_blank" rel="noopener">Informatie voor adviseurs</a></li><li><a href="https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/asn-bank-voor-adviseurs.html" target="_blank" rel="noopener">ASN Bank voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.asnbank.nl/hypotheek/hypotheekvoorwaarden.html" target="_blank" rel="noopener">Hypotheekvoorwaarden ASN Bank</a></li><li><a href="https://www.asnbank.nl/downloads/informatiewijzer-asn-hypotheken.html" target="_blank" rel="noopener">Informatiewijzer ASN Hypotheken</a></li><li><a href="https://www.asnbank.nl/hypotheek/asn-hypotheek.html" target="_blank" rel="noopener">ASN Hypotheek</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://newsroom.asnbank.nl/" target="_blank" rel="noopener">Newsroom ASN Bank (persberichten)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.asnbank.nl/hypotheek/informatie-voor-adviseurs/doorlooptijden.html" target="_blank" rel="noopener">Doorlooptijden hypotheekaanvragen</a></li><li><a href="https://www.asnbank.nl/hypotheek/hypotheekrentes.html" target="_blank" rel="noopener">Hypotheekrentes</a></li><li><a href="https://www.asnbank.nl/hypotheek/maximale-hypotheek-berekenen.html" target="_blank" rel="noopener">Maximale hypotheek berekenen</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.asnbank.nl/service/service-en-contact.html" target="_blank" rel="noopener">Service en contact</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-attens-hypotheken" style="--accent:#d4368a">
       <div class="dhero"><span class="accentbar"></span>
@@ -734,7 +801,11 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead"><a href="https://www.attens.nl/voor-adviseurs/documenten-en-formulieren" target="_blank" rel="noopener">Documenten en formulieren</a> &middot; <a href="https://www.attens.nl/voor-klanten/downloads" target="_blank" rel="noopener">Downloads (voorwaarden)</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-attens-hypotheken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3></div>
+      <p class="act-empty">Voor deze verstrekker zijn nog geen openbare adviseursbronnen gecontroleerd. Gebruik de website en het adviseursportaal hierboven.</p>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-bijbouwe" style="--accent:#c2410c">
       <div class="dhero"><span class="accentbar"></span>
@@ -782,7 +853,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <div class="kv"><span class="k">Aanstelling inregelen</span><span class="v"><a href="mailto:samenwerken@dynamiccredit.com">samenwerken@dynamiccredit.com</a></span></div>
   </div>
 </div>
-
+    <div class="act" id="act-bijbouwe">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van bijBouwe: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.bijbouwe.nl/adviseurs" target="_blank" rel="noopener">bijBouwe voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://dynamic-credit-xmn7.files.prepr.io/1xzdzop9cbvs/bijbouwe-vooruit-productkaart-102026.pdf" target="_blank" rel="noopener">Productkaart bijBouwe Vooruit (oktober 2026)</a></li><li><a href="https://dynamic-credit-xmn7.files.prepr.io/bu5habtgfja/algemene-voorwaarden-bijbouwe-vooruit-2025.pdf" target="_blank" rel="noopener">Algemene voorwaarden bijBouwe Vooruit (versie 2025)</a></li><li><a href="https://dynamic-credit-xmn7.files.prepr.io/98u5wn2mde6/algemene-voorwaarden-bijbouwe-2025.pdf" target="_blank" rel="noopener">Algemene voorwaarden bijBouwe (basis) hypotheek (versie 2025)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://dynamic-credit-xmn7.files.prepr.io/5t3melbwzq79/acceptatiehandleiding-bijbouwe-vooruit-102026.pdf" target="_blank" rel="noopener">Acceptatiehandleiding bijBouwe Vooruit (oktober 2026)</a></li><li><a href="https://dynamic-credit-xmn7.files.prepr.io/75rbs014bu9/acceptatiehandleiding-bijbouwe-basis-september-2026.pdf" target="_blank" rel="noopener">Acceptatiehandleiding bijBouwe (basis) (september 2026)</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://ivng-zcmp.maillist-manage.eu/ua/Optin?od=12ba7e122948&amp;zx=14abfd19da&amp;tD=17d56f91bcf87eb&amp;sD=17d56f91bbe652d" target="_blank" rel="noopener">Aanmelden rente- en nieuwsupdate voor adviseurs</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.bijbouwe.nl/adviseurs/rente" target="_blank" rel="noopener">Actuele rente voor adviseurs</a></li><li><a href="https://www.bijbouwe.nl/rentewijzigingen" target="_blank" rel="noopener">Toekomstige rentewijzigingen</a></li><li><a href="https://www.bijbouwe.nl/documentenchecker" target="_blank" rel="noopener">Online documentenchecker</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.bijbouwe.nl/belangrijke-documenten" target="_blank" rel="noopener">Alle belangrijke documenten (checklists, formulieren, productinfo)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.bijbouwe.nl/adviseurs/service-contact" target="_blank" rel="noopener">Service en contact voor adviseurs</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-build-finance" style="--accent:#4f46e5">
       <div class="dhero"><span class="accentbar"></span>
@@ -808,7 +892,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead">Volendam: Mgr. C. Veermanlaan 1G, 1131 KB Volendam</p>
   </div>
 </div>
-
+    <div class="act" id="act-build-finance">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Build Finance: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://build-finance.com/voor-adviseurs/" target="_blank" rel="noopener">Build voor intermediairs</a></li><li><a href="https://build-finance.com/adviseurs/" target="_blank" rel="noopener">Vind een Build-adviseur</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://build-finance.com/financieringsopties" target="_blank" rel="noopener">Financieringsopties Build GO!, PRO en MAX</a></li><li><a href="https://build-finance.com/verhuurhypotheek/" target="_blank" rel="noopener">Build Verhuurhypotheek</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://build-finance.com/nieuws" target="_blank" rel="noopener">Build nieuws en artikelen</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://build-finance.com/rentes" target="_blank" rel="noopener">Rentes</a></li><li><a href="https://build-finance.com/werkwijze/" target="_blank" rel="noopener">Werkwijze in vijf stappen</a></li><li><a href="https://build-finance.com/indicatief-aanbod" target="_blank" rel="noopener">Indicatief Aanbod aanvragen</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://build-finance.com/hubfs/Documenten/Algemene%20voorwaarden%20Build%20Finance%20per%201%20oktober%202026.pdf" target="_blank" rel="noopener">Algemene voorwaarden Build Finance (per 1 oktober 2026)</a></li><li><a href="https://build-finance.com/hubfs/Algemene%20voorwaarden%20Build%20MAX%20per%201%20mei%202026.pdf" target="_blank" rel="noopener">Algemene voorwaarden Build MAX (per 1 mei 2026)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://build-finance.com/contact/" target="_blank" rel="noopener">Contact Build Finance</a></li><li><a href="https://build-finance.com/veelgestelde-vragen/" target="_blank" rel="noopener">Veelgestelde vragen</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-bunq" style="--accent:#0d9488">
       <div class="dhero"><span class="accentbar"></span>
@@ -837,7 +933,11 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-bunq">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3></div>
+      <p class="act-empty">Voor deze verstrekker zijn nog geen openbare adviseursbronnen gecontroleerd. Gebruik de website en het adviseursportaal hierboven.</p>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-centraal-beheer" style="--accent:#b45309">
       <div class="dhero"><span class="accentbar"></span>
@@ -898,7 +998,11 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead"><strong>Tellius:</strong> <a href="https://www.tellius.nl/voor-adviseurs" target="_blank" rel="noopener">Voor adviseurs</a> &middot; <a href="https://www.tellius.nl/voor-klanten/downloads" target="_blank" rel="noopener">Downloads (voorwaarden)</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-centraal-beheer">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3></div>
+      <p class="act-empty">Voor deze verstrekker zijn nog geen openbare adviseursbronnen gecontroleerd. Gebruik de website en het adviseursportaal hierboven.</p>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-clarian-wonen" style="--accent:#d4368a">
       <div class="dhero"><span class="accentbar"></span>
@@ -926,7 +1030,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-clarian-wonen">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Clarian Wonen: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.clarianwonen.nl/voor-adviseurs" target="_blank" rel="noopener">Clarian Wonen voor adviseurs</a></li><li><a href="https://www.quion.com/adviseur" target="_blank" rel="noopener">Quion adviseurspagina (Track &amp; Trace)</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.clarianwonen.nl/consument/algemene-voorwaarden" target="_blank" rel="noopener">Algemene voorwaarden Clarian Wonen</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.quion.com/nieuws" target="_blank" rel="noopener">Nieuws Quion (servicer van Clarian Wonen)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.clarianwonen.nl/consument/rente" target="_blank" rel="noopener">Rente Clarian Wonen</a></li><li><a href="https://www.quion.com/consument/rentelijsten" target="_blank" rel="noopener">Rentelijsten Quion</a></li><li><a href="https://www.quion.com/helpcentrum" target="_blank" rel="noopener">Quion helpcentrum</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.quion.com/adviseur/downloads" target="_blank" rel="noopener">Downloads en formulieren voor adviseurs (Quion)</a></li><li><a href="https://www.clarianwonen.nl/voor-adviseurs/ontslag-hoofdelijke-aansprakelijkheid-oha" target="_blank" rel="noopener">Ontslag hoofdelijke aansprakelijkheid (OHA)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.clarianwonen.nl/contact" target="_blank" rel="noopener">Contact Clarian Wonen</a></li><li><a href="https://www.quion.com/contact" target="_blank" rel="noopener">Contact Quion</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-de-nederlandse" style="--accent:#2f6fed">
       <div class="dhero"><span class="accentbar"></span>
@@ -955,7 +1071,18 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-de-nederlandse">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van De Nederlandse: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://de-nederlandse.nl/adviseurs/" target="_blank" rel="noopener">Adviseurs - De Nederlandse</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://de-nederlandse.nl/het-product/" target="_blank" rel="noopener">Het product van De Nederlandse</a></li><li><a href="https://de-nederlandse.nl/app/uploads/2025/09/Algemene-voorwaarden-DNL-versie-PXB-april-2025.pdf" target="_blank" rel="noopener">Algemene voorwaarden (april 2025)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://de-nederlandse.nl/procedure/" target="_blank" rel="noopener">De procedure van De Nederlandse</a></li><li><a href="https://de-nederlandse.nl/rente/" target="_blank" rel="noopener">Rente-overzicht (alleen verwijzing)</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://de-nederlandse.nl/taxateurs/" target="_blank" rel="noopener">Informatie voor taxateurs</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://de-nederlandse.nl/contact/" target="_blank" rel="noopener">Contact De Nederlandse</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-florius" style="--accent:#00a37a">
       <div class="dhero"><span class="accentbar"></span>
@@ -984,7 +1111,24 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-florius">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Florius: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-news"><h4>Recent op de site van de verstrekker</h4><ul>
+        <li><time datetime="2026-10-26">26 oktober 2026</time><a href="https://www.florius.nl/adviseurs/nieuws/kredietbeleid-bijgewerkt" target="_blank" rel="noopener">Kredietbeleid bijgewerkt</a></li>
+        <li><time datetime="2026-10-20">20 oktober 2026</time><a href="https://www.florius.nl/adviseurs/nieuws/florius-geeft-je-klanten-meer-tijd-en-ruimte-om-te-verbouwen" target="_blank" rel="noopener">Florius geeft je klanten meer tijd en ruimte om te (ver)bouwen</a></li>
+        <li><time datetime="2026-10-12">12 oktober 2026</time><a href="https://www.florius.nl/adviseurs/nieuws/meer-mogelijkheden-voor-jouw-klanten-per-12-oktober-2026" target="_blank" rel="noopener">Meer mogelijkheden voor jouw klanten per 12 oktober 2026</a></li>
+      </ul></div>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.florius.nl/adviseurs" target="_blank" rel="noopener">Florius voor adviseurs</a></li><li><a href="https://www.florius.nl/adviseurs/samenwerken-met-florius" target="_blank" rel="noopener">Samenwerken met Florius</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/fl-vw02-profijt-hypotheek-per-1-oktober-2025.pdf" target="_blank" rel="noopener">Voorwaarden Profijt Hypotheek (1 oktober 2025)</a></li><li><a href="https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/fl-vw01-compleet-hypotheek-per-1-oktober-2025.pdf" target="_blank" rel="noopener">Voorwaarden Compleet Hypotheek (1 oktober 2025)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.florius.nl/adviseurs/nieuws/kredietbeleid-bijgewerkt" target="_blank" rel="noopener">Nieuwsbericht: kredietbeleid bijgewerkt</a></li><li><a href="https://www.florius.nl/adviseurs/nieuws/vanaf-9-december-2026-beleidswijzigingen-voor-hypotheken" target="_blank" rel="noopener">Nieuwsbericht: beleidswijzigingen vanaf 9 december 2026</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.florius.nl/adviseurs/nieuws" target="_blank" rel="noopener">Adviseursnieuws Florius</a></li><li><a href="https://www.florius.nl/adviseurs/nieuwsarchief" target="_blank" rel="noopener">Nieuwsarchief adviseurs</a></li><li><a href="https://www.florius.nl/adviseurs/blijf-op-de-hoogte" target="_blank" rel="noopener">Houd mij op de hoogte (aanmelden)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.florius.nl/-/media/florius/files/adviseurs---geen-inlog/rentebladen/huidig/florius-renteblad.pdf" target="_blank" rel="noopener">Renteblad Florius (pdf)</a></li><li><a href="https://www.florius.nl/hypotheekrente" target="_blank" rel="noopener">Hypotheekrente Florius</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.florius.nl/-/media/florius/files/fan-open/samenwerkingsvoorwaarden.pdf" target="_blank" rel="noopener">Samenwerkingsvoorwaarden Florius</a></li><li><a href="https://www.florius.nl/-/media/florius/files/fan-open/distributiebeleid-florius.pdf" target="_blank" rel="noopener">Distributiebeleid Florius</a></li><li><a href="https://www.florius.nl/-/media/florius/files/fan-open/aanvraagformulier-samenwerken-florius.pdf" target="_blank" rel="noopener">Aanvraagformulier samenwerken met Florius</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-groene-hart-hypotheken" style="--accent:#c2410c">
       <div class="dhero"><span class="accentbar"></span>
@@ -1013,7 +1157,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-groene-hart-hypotheken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Groene Hart Hypotheken: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://groeneharthypotheken.nl/adviseurs/" target="_blank" rel="noopener">Groene Hart Hypotheken voor adviseurs</a></li><li><a href="https://groeneharthypotheken.nl/adviseurs/adviseur/aanstelling/" target="_blank" rel="noopener">Aanstelling aanvragen</a></li><li><a href="https://groeneharthypotheken.nl/adviseurs/adviseur/veelgestelde-vragen/" target="_blank" rel="noopener">Veelgestelde vragen voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://groeneharthypotheken.nl/adviseurs/hypotheek/" target="_blank" rel="noopener">Hypotheek: productinformatie voor adviseurs</a></li><li><a href="https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Productkaart-_V6_211028.pdf" target="_blank" rel="noopener">Productkaart (pdf)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://groeneharthypotheken.nl/adviseurs/adviseur/acceptatiegids/" target="_blank" rel="noopener">Acceptatiegids</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://groeneharthypotheken.nl/adviseurs/hypotheek/actuele-rente/" target="_blank" rel="noopener">Actuele rente</a></li><li><a href="https://groeneharthypotheken.nl/adviseurs/hypotheek/rentearchief/" target="_blank" rel="noopener">Rentearchief</a></li><li><a href="https://groeneharthypotheken.nl/hypotheek/aanvraagproces/" target="_blank" rel="noopener">Aanvraagproces</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://groeneharthypotheken.nl/adviseurs/adviseur/documenten/" target="_blank" rel="noopener">Belangrijke documenten voor adviseurs</a></li><li><a href="https://groeneharthypotheken.nl/wp-content/uploads/2021/11/Groene_Hart_Hypotheken_Algemenevoorwaarden_V6_211028.pdf" target="_blank" rel="noopener">Algemene voorwaarden (pdf)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://groeneharthypotheken.nl/handig/contact/" target="_blank" rel="noopener">Contact</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-handelsbanken" style="--accent:#b45309">
       <div class="dhero"><span class="accentbar"></span>
@@ -1046,7 +1202,18 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="lead"><a href="mailto:mortgages@handelsbanken.nl">mortgages@handelsbanken.nl</a></p></div>
 </div>
-
+    <div class="act" id="act-handelsbanken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Handelsbanken: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.handelsbanken.nl/nl/intermediair" target="_blank" rel="noopener">Samenwerken met Handelsbanken (intermediair)</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-280100" target="_blank" rel="noopener">Productkaart en acceptatiekaart Intermediair 2026</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.handelsbanken.nl/tron/nlpu/info/contents/v1/document/37-284100" target="_blank" rel="noopener">Acceptatiebeleid Woninghypotheken Intermediair 2026</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.handelsbanken.nl/nl/particulier/hypotheken/actuele-hypotheekrentes" target="_blank" rel="noopener">Actuele hypotheekrentes (rentepagina)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.handelsbanken.nl/nl/service-en-contact" target="_blank" rel="noopener">Service en contact Handelsbanken</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-hollandwoont" style="--accent:#4f46e5">
       <div class="dhero"><span class="accentbar"></span>
@@ -1074,7 +1241,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-hollandwoont">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van HollandWoont: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.hollandwoont.nl/adviseur" target="_blank" rel="noopener">HollandWoont voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Informatiekaart-juni-2025-1-2.pdf" target="_blank" rel="noopener">HollandWoont Informatiekaart (pdf)</a></li><li><a href="https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Algemene-voorwaarden-September-2023-1.pdf" target="_blank" rel="noopener">Algemene voorwaarden HollandWoont (pdf)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Acceptatiegids-Juni-2026.pdf" target="_blank" rel="noopener">HollandWoont Acceptatiegids juni 2026 (pdf)</a></li><li><a href="https://www.hollandwoont.nl/uploads/hollandwoont/files/HollandWoont-Beheergids-Juni-2026.pdf" target="_blank" rel="noopener">HollandWoont Beheergids juni 2026 (pdf)</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.hollandwoont.nl/nieuws" target="_blank" rel="noopener">Nieuwsoverzicht HollandWoont</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.hollandwoont.nl/home-consument/rente" target="_blank" rel="noopener">Rente (rentepagina)</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.hollandwoont.nl/uploads/hollandwoont/files/Formulier-EM-HollandWoont.pdf" target="_blank" rel="noopener">Formulier eigen middelen (pdf)</a></li><li><a href="https://www.hollandwoont.nl/adviseur/ontslag-hoofdelijke-aansprakelijkheid-oha" target="_blank" rel="noopener">Ontslag hoofdelijke aansprakelijkheid (OHA)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.hollandwoont.nl/adviseur/service-contact" target="_blank" rel="noopener">Service en contact voor adviseurs</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-impact-hypotheken" style="--accent:#00a37a">
       <div class="dhero"><span class="accentbar"></span>
@@ -1110,7 +1290,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead"><a href="https://impacthypotheken.nl/handige-documenten/" target="_blank" rel="noopener">Handige documenten &ndash; Impact Hypotheken</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-impact-hypotheken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Impact Hypotheken: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://impacthypotheken.nl/adviseur/" target="_blank" rel="noopener">Impact Hypotheken voor adviseurs</a></li><li><a href="https://impacthypotheken.nl/adviseur/hypotheek-aanvragen/" target="_blank" rel="noopener">Hypotheek aanvragen</a></li><li><a href="https://impacthypotheken.nl/adviseur/samenwerken/" target="_blank" rel="noopener">Samenwerken met Impact</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://impacthypotheken.nl/adviseur/onze-voorwaarden/" target="_blank" rel="noopener">Onze voorwaarden</a></li><li><a href="https://impacthypotheken.nl/adviseur/onze-hypotheekvormen/" target="_blank" rel="noopener">Onze hypotheekvormen</a></li><li><a href="https://impacthypotheken.nl/app/uploads/2024/07/Hypotheekgids-Impact-2024-01.pdf" target="_blank" rel="noopener">Hypotheekgids Impact</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://impacthypotheken.nl/adviseur/ons-acceptatieproces/" target="_blank" rel="noopener">Hoe werkt ons acceptatieproces?</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://impacthypotheken.nl/adviseur/nieuws/" target="_blank" rel="noopener">Nieuws van Impact Hypotheken</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://impacthypotheken.nl/adviseur/actuele-hypotheekrente/" target="_blank" rel="noopener">Actuele hypotheekrente</a></li><li><a href="https://impacthypotheken.nl/adviseur/hypotheek-beheren/" target="_blank" rel="noopener">Hypotheek beheren</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://impacthypotheken.nl/adviseur/handige-documenten/" target="_blank" rel="noopener">Handige documenten</a></li><li><a href="https://impacthypotheken.nl/app/uploads/2024/07/Productkaart-Impact-2024-01.pdf" target="_blank" rel="noopener">Productkaart Impact</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://impacthypotheken.nl/adviseur/contact/" target="_blank" rel="noopener">Contact</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-ing" style="--accent:#e0662b">
       <div class="dhero"><span class="accentbar"></span>
@@ -1130,7 +1323,14 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-ing">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van ING: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://intermediairs.ing.nl/importal/content/public/nl/hypotheek" target="_blank" rel="noopener">ING Intermediairs - hypotheek (publiek deel)</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-iqwoon" style="--accent:#0891b2">
       <div class="dhero"><span class="accentbar"></span>
@@ -1158,7 +1358,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-iqwoon">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van IQWOON: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.iqwoon.nl/adviseur" target="_blank" rel="noopener">IQWOON voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.iqwoon.nl/uploads/iqwoon/files/Algemene-voorwaarden-IQWOON-Juni-2025.pdf" target="_blank" rel="noopener">Algemene voorwaarden IQWOON (juni 2025)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Acceptatiegids-juni-2026.pdf" target="_blank" rel="noopener">Acceptatiegids IQWOON (juni 2026)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.iqwoon.nl/hypotheekrente" target="_blank" rel="noopener">Hypotheekrente IQWOON</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-Beheergids-juni-2026.pdf" target="_blank" rel="noopener">Beheergids IQWOON (juni 2026)</a></li><li><a href="https://www.iqwoon.nl/uploads/iqwoon/files/IQWOON-formulier-hoofdelijk-ontslag.pdf" target="_blank" rel="noopener">Formulier ontslag hoofdelijke aansprakelijkheid</a></li><li><a href="https://www.iqwoon.nl/uploads/iqwoon/files/formulier-em-iqwoon-1.pdf" target="_blank" rel="noopener">Verklaring herkomst van eigen middelen</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.iqwoon.nl/contact" target="_blank" rel="noopener">Contact IQWOON</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-jens" style="--accent:#7c4dff">
       <div class="dhero"><span class="accentbar"></span>
@@ -1194,7 +1406,23 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead"><a href="https://www.jens.nl" target="_blank" rel="noopener">www.jens.nl</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-jens">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Jens: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-news"><h4>Recent op de site van de verstrekker</h4><ul>
+        <li><time datetime="2026-10-08">8 oktober 2026</time><a href="https://jens.nl/jens-onderlinge-hypotheken-doorbreekt-marktbarriere-met-introductie-unieke-losse-overbruggingshypotheek/" target="_blank" rel="noopener">Jens Onderlinge Hypotheken doorbreekt marktbarrière met introductie unieke ‘Losse Overbruggingshypotheek’</a></li>
+        <li><time datetime="2026-09-30">30 september 2026</time><a href="https://jens.nl/jens-overbruggingshypotheek-rente-en-rendement/" target="_blank" rel="noopener">Jens Overbruggingshypotheek: rente en rendement</a></li>
+        <li><time datetime="2026-09-28">28 september 2026</time><a href="https://jens.nl/jens-onderlinge-hypotheken-abn-amro-en-florius-slaan-de-handen-ineen-rondom-goed-georganiseerde-familiehypotheken/" target="_blank" rel="noopener">Jens Onderlinge Hypotheken, ABN AMRO en Florius slaan de handen ineen rondom goed georganiseerde familiehypotheken</a></li>
+      </ul></div>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://jens.nl/intermediairs/" target="_blank" rel="noopener">Jens voor intermediairs</a></li><li><a href="https://jens.nl/aanmelden-als-partner/" target="_blank" rel="noopener">Aanmelden als partner</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://jens.nl/lenen/familiehypotheek/" target="_blank" rel="noopener">Jens Familiehypotheek</a></li><li><a href="https://jens.nl/lenen/jens-netwerkhypotheek/" target="_blank" rel="noopener">Jens Netwerkhypotheek</a></li><li><a href="https://jens.nl/lenen/overbruggingshypotheek/" target="_blank" rel="noopener">Jens Overbruggingshypotheek</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://jens.nl/blog/" target="_blank" rel="noopener">Jens blog</a></li><li><a href="https://jens.nl/pers/" target="_blank" rel="noopener">Pers</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://jens.nl/hypotheekrente/" target="_blank" rel="noopener">Hypotheekrente en adviesrentes</a></li><li><a href="https://jens.nl/handleiding/" target="_blank" rel="noopener">Handleiding Jens Dashboard</a></li><li><a href="https://jens.nl/lenen/kosten/" target="_blank" rel="noopener">Kosten per hypotheekoplossing</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://jens.nl/afspraak/" target="_blank" rel="noopener">Afspraak maken</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-knab" style="--accent:#0891b2">
       <div class="dhero"><span class="accentbar"></span>
@@ -1223,7 +1451,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="lead"><a href="tel:+31850410920">085 - 041 09 20</a></p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-knab">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Knab: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.knab.nl/particulier/hypotheken/knab-hypotheek/adviseurs" target="_blank" rel="noopener">Knab Hypotheek: voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/7b07b564-5081-4924-b174-3505f3024f33/KnabHypotheek_Productkaart_2026_NL.pdf" target="_blank" rel="noopener">Productkaart Knab Hypotheek 2026</a></li><li><a href="https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/c540aa01-3a3c-418b-836f-7f28fa37720b/Productvoorwaarden%20Knab%20Hypotheek%2013032026.pdf" target="_blank" rel="noopener">Productvoorwaarden Knab Hypotheek (13-03-2026)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/a50a048d-3f34-4fd1-a920-6ada5d56cb7c/Knab%20Hypotheek_Acceptatiegids_07092026.pdf" target="_blank" rel="noopener">Acceptatiegids Knab Hypotheek (07-09-2026)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.knab.nl/particulier/hypotheken/knab-hypotheek/actuele-hypotheekrente" target="_blank" rel="noopener">Actuele hypotheekrente Knab Hypotheek</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.knab.nl/assets/35355cb5-f8a5-0105-c237-9bab7d11ff84/521d8320-00c4-4fd8-b25e-278faa649dbd/KnabHypotheek_Beheergids_13032026.pdf" target="_blank" rel="noopener">Beheergids Knab Hypotheek (13-03-2026)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.knab.nl/contact" target="_blank" rel="noopener">Contact Knab</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-lloyds-bank" style="--accent:#d4368a">
       <div class="dhero"><span class="accentbar"></span>
@@ -1261,7 +1501,11 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="note"><strong>Let op:</strong> rentetarieven staan niet centraal online. Lloyds Bank mailt het actuele renteblad per rentewijziging aan de adviseurs.</p>
   </div>
 </div>
-
+    <div class="act" id="act-lloyds-bank">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3></div>
+      <p class="act-empty">Voor deze verstrekker zijn nog geen openbare adviseursbronnen gecontroleerd. Gebruik de website en het adviseursportaal hierboven.</p>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-merius" style="--accent:#c2410c">
       <div class="dhero"><span class="accentbar"></span>
@@ -1297,7 +1541,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead"><a href="https://meriushypotheken.nl/handige-documenten/" target="_blank" rel="noopener">Handige documenten &ndash; Merius Hypotheken</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-merius">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Merius: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://meriushypotheken.nl/adviseur/" target="_blank" rel="noopener">Merius Hypotheken voor adviseurs</a></li><li><a href="https://meriushypotheken.nl/adviseur/hypotheek-aanvragen/" target="_blank" rel="noopener">Hypotheek aanvragen</a></li><li><a href="https://meriushypotheken.nl/adviseur/samenwerken/" target="_blank" rel="noopener">Samenwerken met Merius</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://meriushypotheken.nl/adviseur/algemene-voorwaarden/" target="_blank" rel="noopener">Algemene voorwaarden</a></li><li><a href="https://meriushypotheken.nl/adviseur/onze-hypotheekvormen/" target="_blank" rel="noopener">Onze hypotheekvormen</a></li><li><a href="https://meriushypotheken.nl/app/uploads/2024/07/Merius-Hypotheekgids-2024-01.pdf" target="_blank" rel="noopener">Merius Hypotheekgids</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://meriushypotheken.nl/adviseur/ons-acceptatieproces/" target="_blank" rel="noopener">Hoe werkt ons acceptatieproces?</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://meriushypotheken.nl/adviseur/nieuws/" target="_blank" rel="noopener">Nieuws van Merius Hypotheken</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://meriushypotheken.nl/adviseur/actuele-hypotheekrente/" target="_blank" rel="noopener">Actuele hypotheekrente</a></li><li><a href="https://meriushypotheken.nl/adviseur/verwerkingstijden/" target="_blank" rel="noopener">Verwerkingstijden</a></li><li><a href="https://meriushypotheken.nl/adviseur/hypotheek-beheren/" target="_blank" rel="noopener">Hypotheek beheren</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://meriushypotheken.nl/adviseur/documenten/" target="_blank" rel="noopener">Documenten en formulieren</a></li><li><a href="https://meriushypotheken.nl/app/uploads/2024/07/Merius-Productkaart-2024-01.pdf" target="_blank" rel="noopener">Merius Productkaart</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://meriushypotheken.nl/adviseur/contact/" target="_blank" rel="noopener">Contact</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-munt-hypotheken" style="--accent:#4f46e5">
       <div class="dhero"><span class="accentbar"></span>
@@ -1356,7 +1613,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <a class="cta" href="https://www.munthypotheken.nl/downloads/" target="_blank" rel="noopener">Naar downloads →</a>
   </div>
 </div>
-
+    <div class="act" id="act-munt-hypotheken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van MUNT Hypotheken: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.munthypotheken.nl/ik-ben-adviseur/" target="_blank" rel="noopener">Ik ben adviseur - MUNT Hypotheken</a></li><li><a href="https://www.munthypotheken.nl/service-provider/" target="_blank" rel="noopener">Informatie voor service providers</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf" target="_blank" rel="noopener">MUNT Hypotheekgids 2026</a></li><li><a href="https://www.munthypotheken.nl/site/assets/files/2894/munt_productkaart_2026-2.pdf" target="_blank" rel="noopener">MUNT Productkaart 2026</a></li><li><a href="https://www.munthypotheken.nl/site/assets/files/38851/munt_beheergids_2026.pdf" target="_blank" rel="noopener">MUNT Beheergids 2026</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.munthypotheken.nl/site/assets/files/19132/oha_proces_in_beslisboom_2026.pdf" target="_blank" rel="noopener">OHA-proces in beslisboom 2026</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.munthypotheken.nl/munt-tips/" target="_blank" rel="noopener">MUNT TIPS</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.munthypotheken.nl/rente/" target="_blank" rel="noopener">Rente-overzicht (alleen verwijzing)</a></li><li><a href="https://www.munthypotheken.nl/downloads/tools/rekentool-levenslang-zeker-hypotheek/" target="_blank" rel="noopener">Rekentool Levenslang Zeker Hypotheek</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.munthypotheken.nl/downloads/" target="_blank" rel="noopener">Downloads en formulieren</a></li><li><a href="https://www.munthypotheken.nl/site/assets/files/5524/informatieblad_voor_distributiepartners_v23.pdf" target="_blank" rel="noopener">Informatieblad voor distributiepartners</a></li><li><a href="https://www.munthypotheken.nl/site/assets/files/25529/wijzigen_intermediair-1.pdf" target="_blank" rel="noopener">Formulier wijzigen intermediair</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.munthypotheken.nl/contact/" target="_blank" rel="noopener">Contact MUNT Hypotheken</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-nationale-nederlanden" style="--accent:#0d9488">
       <div class="dhero"><span class="accentbar"></span>
@@ -1395,7 +1665,23 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead">Productvoorwaarden, acceptatiebeleid, rentetarieven en formulieren: <a href="https://adviseur.nn.nl/hypotheken" target="_blank" rel="noopener">adviseur.nn.nl/hypotheken</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-nationale-nederlanden">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Nationale-Nederlanden: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-news"><h4>Recent op de site van de verstrekker</h4><ul>
+        <li><time datetime="2026-11-02">2 november 2026</time><a href="https://adviseur.nn.nl/nieuws/wijziging-hypotheekrente-per-04-11-2026" target="_blank" rel="noopener">Wijziging hypotheekrente per 04-11-2026</a></li>
+        <li><time datetime="2026-10-31">31 oktober 2026</time><a href="https://adviseur.nn.nl/nieuws/svn-starterslening-mogelijk-bij-nn" target="_blank" rel="noopener">SVn Starterslening mogelijk bij NN</a></li>
+        <li><time datetime="2026-10-29">29 oktober 2026</time><a href="https://adviseur.nn.nl/nieuws/wijziging-hypotheekrente-per-02-11-2026" target="_blank" rel="noopener">Wijziging hypotheekrente per 02-11-2026</a></li>
+      </ul></div>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://adviseur.nn.nl/" target="_blank" rel="noopener">NN Adviseur (startpagina)</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.nn.nl/Download/Voorwaarden-NN-Hypotheek.htm" target="_blank" rel="noopener">Voorwaarden bij uw NN Hypotheek (pdf)</a></li><li><a href="https://www.nn.nl/Download/Vergelijkingskaart-Hypotheek.htm" target="_blank" rel="noopener">Vergelijkingskaart Hypotheek</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://adviseur.nn.nl/nieuws" target="_blank" rel="noopener">Nieuwsoverzicht NN Adviseur</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.nn.nl/Particulier/Hypotheken/Hypotheekrente.htm" target="_blank" rel="noopener">Actuele hypotheekrente NN</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://adviseur.nn.nl/contact/hypotheken" target="_blank" rel="noopener">Service en contact hypotheken voor adviseurs</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-nationale-waarborg" style="--accent:#1d2a6b">
       <div class="dhero"><span class="accentbar"></span>
@@ -1444,7 +1730,25 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead"><a href="https://support.fasterforward.nl/kennisbank/bankgaranties-aanvragen/" target="_blank" rel="noopener">Kennisbank: bankgaranties aanvragen</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-nationale-waarborg">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Nationale Waarborg: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-news"><h4>Recent op de site van de verstrekker</h4><ul>
+        <li><time datetime=""></time><a href="https://nationalewaarborg.nl/adviseur/nieuws/update-188-laatste-kans-schrijf-je-in-voor-onze-masterclass-tijdens-hypovak/" target="_blank" rel="noopener">Update 188 | Laatste kans: schrijf je in voor onze masterclass tijdens HypoVak</a></li>
+        <li><time datetime=""></time><a href="https://nationalewaarborg.nl/adviseur/nieuws/update-187-wat-als-je-klant-belt-met-wat-moet-ik-bieden/" target="_blank" rel="noopener">Update 187 | Wat als je klant belt met &quot;Wat moet ik bieden?&quot;</a></li>
+        <li><time datetime=""></time><a href="https://nationalewaarborg.nl/adviseur/nieuws/update-186-stop-met-doorverwijzen-start-met-aankoopbegeleiding/" target="_blank" rel="noopener">Update 186 | Stop met doorverwijzen. Start met aankoopbegeleiding.</a></li>
+      </ul></div>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://nationalewaarborg.nl/adviseur/" target="_blank" rel="noopener">Nationale Waarborg voor de adviseur</a></li><li><a href="https://nationalewaarborg.nl/adviseur/werkwijze/" target="_blank" rel="noopener">Werkwijze</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://nationalewaarborg.nl/adviseur/producten/" target="_blank" rel="noopener">Producten bankgarantie</a></li><li><a href="https://nationalewaarborg.nl/adviseur/producten/bankgarantiezeker/" target="_blank" rel="noopener">BankGarantieZeker</a></li><li><a href="https://nationalewaarborg.nl/adviseur/verzekering/" target="_blank" rel="noopener">Verzekering op de bankgarantie</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://nationalewaarborg.nl/adviseur/werkwijze/algemene-procedures/" target="_blank" rel="noopener">Algemene procedures</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://nationalewaarborg.nl/adviseur/nieuws/" target="_blank" rel="noopener">Nieuws voor adviseurs</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://nationalewaarborg.nl/adviseur/werkwijze/aanvragen/" target="_blank" rel="noopener">Bankgarantie aanvragen</a></li><li><a href="https://nationalewaarborg.nl/adviseur/werkwijze/aanvragen/de-aanvraag-in-nwb-online/" target="_blank" rel="noopener">Aanvraag in NWB Online</a></li><li><a href="https://nationalewaarborg.nl/site-waarborg/storage/files/1850/handleiding_nwb_online.pdf" target="_blank" rel="noopener">Handleiding NWB Online (pdf)</a></li><li><a href="https://nationalewaarborg.nl/adviseur/werkwijze/digitaal-ondertekenen/" target="_blank" rel="noopener">Digitaal ondertekenen</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://nationalewaarborg.nl/adviseur/werkwijze/documenten/" target="_blank" rel="noopener">Documenten en brochures</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://nationalewaarborg.nl/adviseur/contact/" target="_blank" rel="noopener">Contact</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-nibc" style="--accent:#b45309">
       <div class="dhero"><span class="accentbar"></span>
@@ -1493,7 +1797,25 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <div class="kv"><span class="k">Downloads</span><span class="v"><a href="https://nibc.nl/intermediair/downloads" target="_blank" rel="noopener">Productkaarten, proposities, voorwaarden</a></span></div>
   </div>
 </div>
-
+    <div class="act" id="act-nibc">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van NIBC: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-news"><h4>Recent op de site van de verstrekker</h4><ul>
+        <li><time datetime="2026-11-03">3 november 2026</time><a href="https://nibc.nl/intermediair/nieuwsberichten/aflossingsvrije-hypotheken" target="_blank" rel="noopener">Voorgenomen wijzigingen aflossingsvrije hypotheken</a></li>
+        <li><time datetime="2026-10-13">13 oktober 2026</time><a href="https://nibc.nl/intermediair/nieuwsberichten/interview-brondata" target="_blank" rel="noopener">Brondata: maar dan in één keer goed</a></li>
+        <li><time datetime="2026-10-11">11 oktober 2026</time><a href="https://nibc.nl/intermediair/nieuwsberichten/groei-brondata-hypotheekaanvragen" target="_blank" rel="noopener">Brondata groeit. Maar het dubbele werk is nog niet verdwenen</a></li>
+      </ul></div>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://nibc.nl/intermediair" target="_blank" rel="noopener">NIBC Hypotheken voor intermediairs</a></li><li><a href="https://nibc.nl/intermediair/hypotheken" target="_blank" rel="noopener">NIBC Hypotheken: overzicht hypotheken</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://nibc.nl/intermediair/hypotheekgids" target="_blank" rel="noopener">Digitale hypotheekgids NIBC</a></li><li><a href="https://nibc.nl/intermediair/hypotheekgids-downloads" target="_blank" rel="noopener">Hypotheekgids downloads</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://nibc.nl/intermediair/hypotheekgids/vragen/1-voorwoord/voorwoord-hypotheekgids" target="_blank" rel="noopener">Voorwoord hypotheekgids (acceptatie en voorwaarden)</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://nibc.nl/intermediair/nieuwsberichten" target="_blank" rel="noopener">Nieuwsberichten NIBC intermediair</a></li><li><a href="https://nibc.nl/intermediair/whatsapp-nieuwsbrief" target="_blank" rel="noopener">Aanmelden WhatsApp-nieuwsbrief</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://nibc.nl/intermediair/verwerkingstijden" target="_blank" rel="noopener">Verwerkingstijden NIBC</a></li><li><a href="https://nibc.nl/intermediair/rentes" target="_blank" rel="noopener">Rentes NIBC (rentepagina)</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://nibc.nl/intermediair/downloads" target="_blank" rel="noopener">Downloads: productkaarten en formulieren</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://nibc.nl/intermediair/contact" target="_blank" rel="noopener">Contact NIBC intermediair</a></li><li><a href="https://nibc.nl/intermediair/hypotheekdesk" target="_blank" rel="noopener">Hypotheekdesk NIBC</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-obvion" style="--accent:#2f6fed">
       <div class="dhero"><span class="accentbar"></span>
@@ -1521,7 +1843,25 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-obvion">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Obvion: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-news"><h4>Recent op de site van de verstrekker</h4><ul>
+        <li><time datetime="2026-11-04">4 november 2026</time><a href="https://obvion.nl/adviseur/nieuws/renteverlaging-per-5-november-2026/" target="_blank" rel="noopener">Renteverlaging per 5 november 2026</a></li>
+        <li><time datetime="2026-10-29">29 oktober 2026</time><a href="https://obvion.nl/adviseur/nieuws/renteverlaging-per-30-oktober-2026/" target="_blank" rel="noopener">Renteverlaging per 30 oktober 2026</a></li>
+        <li><time datetime="2026-10-22">22 oktober 2026</time><a href="https://obvion.nl/adviseur/nieuws/renteverlaging-per-23-oktober-2026/" target="_blank" rel="noopener">Renteverlaging per 23 oktober 2026</a></li>
+      </ul></div>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://obvion.nl/adviseur/" target="_blank" rel="noopener">Obvion voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://obvion.nl/media/wsshjw1k/productkaart-hypotheeksoorten-obvion.pdf" target="_blank" rel="noopener">Productkaart hypotheeksoorten Obvion (pdf)</a></li><li><a href="https://obvion.nl/adviseur/beleid/" target="_blank" rel="noopener">Producten en beleid voor adviseurs</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://obvion.nl/adviseur/beleid/acceptatiegids/" target="_blank" rel="noopener">Acceptatiegids</a></li><li><a href="https://obvion.nl/media/kxudk0d2/product-en-acceptatiekaart.pdf" target="_blank" rel="noopener">Product- en acceptatiekaart (pdf)</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://obvion.nl/adviseur/nieuws/" target="_blank" rel="noopener">Nieuwsoverzicht voor adviseurs</a></li><li><a href="https://obvion.nl/adviseur/mailings/" target="_blank" rel="noopener">Mailings (nieuwsbrief) voor adviseurs</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://obvion.nl/adviseur/rentetarieven/" target="_blank" rel="noopener">Rentetarieven (rentepagina)</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://obvion.nl/adviseur/downloads/voor-adviseurs/" target="_blank" rel="noopener">Downloads voor adviseurs</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://obvion.nl/adviseur/service/" target="_blank" rel="noopener">Service voor adviseurs</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-orange-credit" style="--accent:#e0662b">
       <div class="dhero"><span class="accentbar"></span>
@@ -1549,7 +1889,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="lead"><a href="tel:+31858200080">085 - 820 00 80</a></p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="lead"><a href="mailto:info@orangecredit.nl">info@orangecredit.nl</a></p></div>
 </div>
-
+    <div class="act" id="act-orange-credit">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Orange Credit: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://orangecredit.nl/voor-adviseurs/" target="_blank" rel="noopener">Orange Credit voor adviseurs</a></li><li><a href="https://orangecredit.nl/zoek-een-adviseur/stappenplan-hypotheek-aanvragen/" target="_blank" rel="noopener">Stappenplan hypotheek aanvragen</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://orangecredit.nl/wp-content/uploads/2026/07/Productkaart-Orange-Credit-Woonboot-2026.2.pdf" target="_blank" rel="noopener">Productkaart Orange Credit Woonboothypotheek</a></li><li><a href="https://orangecredit.nl/algemene-leningsvoorwaarden-woonboothypotheek/" target="_blank" rel="noopener">Algemene en leningsvoorwaarden</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://orangecredit.nl/wp-content/uploads/2026/07/Acceptatiegids-Orange-Credit-Woonboot-Hypotheek-v2026.2.pdf" target="_blank" rel="noopener">Acceptatiegids Orange Credit Woonboot Hypotheek</a></li><li><a href="https://orangecredit.nl/hypotheken-2/wel-of-niet-financierbaar/" target="_blank" rel="noopener">Wel of niet financierbaar?</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://orangecredit.nl/nieuws/" target="_blank" rel="noopener">Kennis en nieuws Orange Credit</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://orangecredit.nl/rente-orange-credit-woonboothypotheek/" target="_blank" rel="noopener">Rente en rentekorting</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://orangecredit.nl/wp-content/uploads/2026/09/Aanstellingsformulier-Intermediair-2026.1.docx" target="_blank" rel="noopener">Aanstellingsformulier intermediair (versie 2026.1)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://orangecredit.nl/contact-woonboothypotheek/" target="_blank" rel="noopener">Contact Orange Credit</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-rabobank" style="--accent:#00a37a">
       <div class="dhero"><span class="accentbar"></span>
@@ -1575,7 +1928,11 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="lead"><a href="mailto:intermediairwonen@rabobank.nl">intermediairwonen@rabobank.nl</a></p></div>
 </div>
-
+    <div class="act" id="act-rabobank">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3></div>
+      <p class="act-empty">Voor deze verstrekker zijn nog geen openbare adviseursbronnen gecontroleerd. Gebruik de website en het adviseursportaal hierboven.</p>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-robuust" style="--accent:#7c4dff">
       <div class="dhero"><span class="accentbar"></span>
@@ -1603,7 +1960,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-robuust">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Robuust: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.robuusthypotheken.nl/ik-ben-adviseur" target="_blank" rel="noopener">Robuust Hypotheken: ik ben adviseur</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.robuusthypotheken.nl/uploads/robuust/files/Algemene-voorwaarden-Robuust-Hypotheken-B.V.-September-2023.pdf" target="_blank" rel="noopener">Algemene voorwaarden Robuust Hypotheken (september 2023)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.robuusthypotheken.nl/uploads/robuust/files/Acceptatiegids-Robuust-juni-2026.pdf" target="_blank" rel="noopener">Acceptatiegids Robuust (juni 2026)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.robuusthypotheken.nl/home/rentes" target="_blank" rel="noopener">Rentes Robuust Hypotheken</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.robuusthypotheken.nl/home/downloads" target="_blank" rel="noopener">Downloads Robuust Hypotheken</a></li><li><a href="https://www.robuusthypotheken.nl/uploads/robuust/files/Beheergids-Robuust-juni-2026.pdf" target="_blank" rel="noopener">Beheergids Robuust (juni 2026)</a></li><li><a href="https://www.robuusthypotheken.nl/ik-ben-adviseur/ontslag-hoofdelijke-aansprakelijkheid-oha" target="_blank" rel="noopener">Ontslag hoofdelijke aansprakelijkheid (OHA)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.robuusthypotheken.nl/contact" target="_blank" rel="noopener">Contact Robuust Hypotheken</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-socio-hypotheek" style="--accent:#e0662b">
       <div class="dhero"><span class="accentbar"></span>
@@ -1630,7 +1999,18 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="lead"><a href="tel:+31852100811">085 - 210 08 11</a></p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="lead"><a href="mailto:info@sociohypotheek.nl">info@sociohypotheek.nl</a></p></div>
 </div>
-
+    <div class="act" id="act-socio-hypotheek">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Socio Hypotheek: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.sociohypotheek.nl/adviseursportaal/downloads/" target="_blank" rel="noopener">Downloads voor adviseurs (adviseursportaal)</a></li><li><a href="https://www.sociohypotheek.nl/vind-een-adviseur/" target="_blank" rel="noopener">Vind een adviseur</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.sociohypotheek.nl/assets/files/22042026-productwijzer-sociohypotheek-1.pdf" target="_blank" rel="noopener">Productwijzer SocioHypotheek (pdf)</a></li><li><a href="https://www.sociohypotheek.nl/assets/files/informatiebrochure-sociohypotheek-2.pdf" target="_blank" rel="noopener">Informatiebrochure SocioHypotheek (pdf)</a></li><li><a href="https://www.sociohypotheek.nl/assets/files/260301-algemene-voorwaarden-versie-maart.pdf" target="_blank" rel="noopener">Algemene voorwaarden, versie maart (pdf)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.sociohypotheek.nl/rente/" target="_blank" rel="noopener">Actuele hypotheekrente</a></li><li><a href="https://www.sociohypotheek.nl/overwaarde-berekenen/" target="_blank" rel="noopener">Overwaarde berekenen</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.sociohypotheek.nl/assets/files/20210608-ontruimingsverklaring-smart.pdf" target="_blank" rel="noopener">Ontruimingsverklaring (pdf)</a></li><li><a href="https://www.sociohypotheek.nl/adviseursportaal/klacht/" target="_blank" rel="noopener">Klacht indienen</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.sociohypotheek.nl/contact/" target="_blank" rel="noopener">Service en contact</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-solidbriq" style="--accent:#7c4dff">
       <div class="dhero"><span class="accentbar"></span>
@@ -1659,7 +2039,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="lead"><a href="tel:+31858200080">085 - 820 00 80</a></p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="lead"><a href="mailto:info@orangecredit.nl">info@orangecredit.nl</a></p></div>
 </div>
-
+    <div class="act" id="act-solidbriq">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Solidbriq: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.solidbriq.nl/adviseurs-taxateurs/" target="_blank" rel="noopener">Adviseurs en taxateurs SolidBriQ</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.solidbriq.nl/algemene-voorwaarden/" target="_blank" rel="noopener">Algemene voorwaarden SolidBriQ</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.solidbriq.nl/maximale-ltv/" target="_blank" rel="noopener">Maximale LTV</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.solidbriq.nl/nieuws/" target="_blank" rel="noopener">Nieuws SolidBriQ</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.solidbriq.nl/actuele-rentetarieven/" target="_blank" rel="noopener">Actuele rentetarieven (rentepagina)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.solidbriq.nl/contact-service/" target="_blank" rel="noopener">Contact en service SolidBriQ</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-syntrus-achmea" style="--accent:#0891b2">
       <div class="dhero"><span class="accentbar"></span>
@@ -1688,7 +2080,11 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead"><a href="https://www.syntrusachmeahypotheken.nl/documenten-voor-hypotheekadviseurs" target="_blank" rel="noopener">Documenten voor hypotheekadviseurs</a> &middot; <a href="https://www.syntrusachmeahypotheken.nl/voor-klanten/downloads" target="_blank" rel="noopener">Downloads (voorwaarden)</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-syntrus-achmea">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3></div>
+      <p class="act-empty">Voor deze verstrekker zijn nog geen openbare adviseursbronnen gecontroleerd. Gebruik de website en het adviseursportaal hierboven.</p>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-triodos-bank" style="--accent:#0d9488">
       <div class="dhero"><span class="accentbar"></span>
@@ -1708,7 +2104,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="lead"><a href="tel:+31306942001">030 - 694 20 01</a></p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="lead"><a href="mailto:intermediairsdesk@triodos.nl">intermediairsdesk@triodos.nl</a></p></div>
 </div>
-
+    <div class="act" id="act-triodos-bank">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Triodos Bank: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.triodos.nl/hypotheken/intermediairs" target="_blank" rel="noopener">Triodos Bank voor intermediairs</a></li><li><a href="https://www.triodos.nl/hypotheken" target="_blank" rel="noopener">Triodos Hypotheken</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://www.triodos.nl/downloads/algemene-voorwaarden-basisinformatie-voor-woninghypotheken?id=4ed5acec9074" target="_blank" rel="noopener">Algemene Voorwaarden en Basisinformatie Woninghypotheken</a></li><li><a href="https://www.triodos.nl/downloads/kenmerken-van-onze-hypotheek?id=72c133c7aa58" target="_blank" rel="noopener">Kenmerken van onze hypotheek</a></li><li><a href="https://www.triodos.nl/downloads/vergelijkingskaart-hypotheek?id=3e4b8e616638" target="_blank" rel="noopener">Vergelijkingskaart Hypotheek</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://www.triodos.nl/downloads/acceptatiebeleid-hypotheken-juli-2026?id=50c63188e554" target="_blank" rel="noopener">Acceptatiebeleid Hypotheken juli 2026</a></li><li><a href="https://www.triodos.nl/downloads/proces-klantonderzoek?id=b7f5f34a0ceb" target="_blank" rel="noopener">Proces klantonderzoek</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.triodos.nl/nieuwsbrieven" target="_blank" rel="noopener">Nieuwsbrieven Triodos Bank</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.triodos.nl/hypotheken/intermediairs#rentes" target="_blank" rel="noopener">Actuele rentes voor intermediairs</a></li><li><a href="https://www.triodos.nl/downloads/triodos-hypotheek-risicoopslagen-20062026?id=7cc9ae2807ff" target="_blank" rel="noopener">Risico-opslagen Triodos Hypotheek</a></li><li><a href="https://www.triodos.nl/service/particulieren/bankieren/beschikbaarheid-dienstverlening" target="_blank" rel="noopener">Beschikbaarheid dienstverlening</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.triodos.nl/hypotheken/intermediairs#documenten" target="_blank" rel="noopener">Documenten en downloads voor intermediairs</a></li><li><a href="https://www.triodos.nl/downloads/motivatieformulier-overruleexplain-triodos-bank?id=c3f1340004db" target="_blank" rel="noopener">Motivatieformulier Overrule-Explain</a></li><li><a href="https://www.triodos.nl/downloads/obligo-formulier-triodos-bank?id=67b7be92b030" target="_blank" rel="noopener">Obligo formulier Triodos Bank</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.triodos.nl/contact" target="_blank" rel="noopener">Contact Triodos Bank</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-tulp-hypotheken" style="--accent:#d4368a">
       <div class="dhero"><span class="accentbar"></span>
@@ -1736,7 +2145,19 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-tulp-hypotheken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Tulp Hypotheken: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://tulphypotheken.nl/adviseurs/" target="_blank" rel="noopener">Tulp Hypotheken voor adviseurs</a></li><li><a href="https://tulphypotheken.nl/adviseurs/proces/" target="_blank" rel="noopener">Proces voor adviseurs</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://tulphypotheken.nl/adviseurs/product-adviseur/" target="_blank" rel="noopener">Producten voor adviseurs</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://tulphypotheken.nl/adviseurs/proces/tulp-acceptatiegids/" target="_blank" rel="noopener">Tulp Acceptatiegids</a></li><li><a href="https://tulphypotheken.nl/adviseurs/proces/overrule/" target="_blank" rel="noopener">Overrule-procedure</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://tulphypotheken.nl/adviseurs/rente/" target="_blank" rel="noopener">Rente-overzicht voor adviseurs (alleen verwijzing)</a></li><li><a href="https://tulphypotheken.nl/onze-verwerkingstermijnen/" target="_blank" rel="noopener">Onze verwerkingstermijnen</a></li><li><a href="https://tulphypotheken.nl/adviseurs/proces/veelgestelde-vragen/" target="_blank" rel="noopener">Veelgestelde vragen voor adviseurs</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://tulphypotheken.nl/adviseurs/proces/belangrijke-documenten/" target="_blank" rel="noopener">Belangrijke documenten voor adviseurs</a></li><li><a href="https://tulphypotheken.nl/wp-content/uploads/2026/10/Tulp-Explainformulier-OHA.pdf" target="_blank" rel="noopener">Tulp Explainformulier OHA</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://tulphypotheken.nl/adviseurs/contact/" target="_blank" rel="noopener">Contact voor adviseurs</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-venn-hypotheken" style="--accent:#c2410c">
       <div class="dhero"><span class="accentbar"></span>
@@ -1785,7 +2206,11 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <p class="lead">Productkaart en Kredietgids (acceptatiebeleid, voorwaarden, formulieren): <a href="https://www.vennhypotheken.nl/adviseurs/handige-documenten" target="_blank" rel="noopener">Handige documenten – Venn Hypotheken</a></p>
   </div>
 </div>
-
+    <div class="act" id="act-venn-hypotheken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3></div>
+      <p class="act-empty">Voor deze verstrekker zijn nog geen openbare adviseursbronnen gecontroleerd. Gebruik de website en het adviseursportaal hierboven.</p>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
     <section class="lender-detail" id="d-impact-opleidingen" style="--accent:#c8102e">
       <div class="dhero"><span class="accentbar"></span>
@@ -1975,7 +2400,20 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
   <div class="card"><h3><span class="ic">🛟</span>Helpdesk telefoon</h3><p class="todo">Nog in te vullen</p></div>
   <div class="card"><h3><span class="ic">📧</span>Helpdesk e-mail</h3><p class="todo">Nog in te vullen</p></div>
 </div>
-
+    <div class="act" id="act-vista-hypotheken">
+      <div class="act-h"><h3>Actueel voor adviseurs</h3><span class="chk">Gecontroleerd op 4 november 2026</span></div>
+      <p class="act-sub">Officiële bronnen van Vista Hypotheken: nieuws, voorwaarden, hypotheekgidsen en hulpmiddelen. Alle links zijn openbaar.</p>
+      <div class="act-grid">
+        <div><h4>Voor adviseurs</h4><ul><li><a href="https://www.vistahypotheken.nl/voor-adviseurs" target="_blank" rel="noopener">Alles voor jou als adviseur</a></li><li><a href="https://www.vistahypotheken.nl/kennisbank" target="_blank" rel="noopener">Kennisbank</a></li></ul></div>
+        <div><h4>Producten, voorwaarden &amp; gidsen</h4><ul><li><a href="https://files.vistahypotheken.nl/1789560824-hypothekengids-september-2026-v1-0-versie-website.pdf" target="_blank" rel="noopener">Hypothekengids september 2026 (pdf)</a></li><li><a href="https://files.vistahypotheken.nl/1751270459-algemene-voorwaarden-vista-2025.pdf" target="_blank" rel="noopener">Algemene voorwaarden 2025 (pdf)</a></li></ul></div>
+        <div><h4>Acceptatie &amp; beleid</h4><ul><li><a href="https://files.vistahypotheken.nl/1736755903-250110_vista_productkaart_acceptatie.pdf" target="_blank" rel="noopener">Productkaart acceptatie (pdf)</a></li><li><a href="https://files.vistahypotheken.nl/1736755968-250110_vista_productkaart_beheer.pdf" target="_blank" rel="noopener">Productkaart beheer (pdf)</a></li></ul></div>
+        <div><h4>Nieuws &amp; wijzigingen</h4><ul><li><a href="https://www.vistahypotheken.nl/verhalen" target="_blank" rel="noopener">Vista Verhalen (nieuws en blogs)</a></li></ul></div>
+        <div><h4>Tools &amp; rekenhulpen</h4><ul><li><a href="https://www.vistahypotheken.nl/actuele-hypotheekrente" target="_blank" rel="noopener">Actuele hypotheekrente</a></li><li><a href="https://www.vistahypotheken.nl/doorlooptijden-van-vista" target="_blank" rel="noopener">Doorlooptijden van Vista</a></li><li><a href="https://www.vistahypotheken.nl/klantbeeldformulier-invullen" target="_blank" rel="noopener">Klantbeeldformulier invullen</a></li></ul></div>
+        <div><h4>Documenten &amp; formulieren</h4><ul><li><a href="https://www.vistahypotheken.nl/downloads" target="_blank" rel="noopener">Downloads</a></li><li><a href="https://files.vistahypotheken.nl/1747747691-oha-aanvraagformulier.pdf" target="_blank" rel="noopener">Aanvraagformulier Ontslag Hoofdelijke Aansprakelijkheid (pdf)</a></li></ul></div>
+        <div><h4>Contact &amp; service</h4><ul><li><a href="https://www.vistahypotheken.nl/contact" target="_blank" rel="noopener">Contact</a></li></ul></div>
+      </div>
+      <p class="act-disc">Rentes, acceptatienormen en voorwaarden wijzigen regelmatig en staan hier bewust niet. Raadpleeg altijd de actuele bron van de verstrekker voordat je adviseert. Dit overzicht is geen advies en geen garantie op volledigheid.</p>
+    </div>
     </section>
   </div>
 
