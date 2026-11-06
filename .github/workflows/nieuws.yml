@@ -1,0 +1,83 @@
+name: Nieuws verversen
+
+# Haalt op de 1e van de maand het nieuws van Obvion, NN, Florius, NIBC en Jens op
+# en werkt index.html bij. Mislukt een bron, dan blijft het oude nieuws staan en
+# wordt er een issue geopend. Handmatig starten kan via het tabblad Actions.
+on:
+  schedule:
+    - cron: "23 6 1 * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Alleen rapporteren, niets wijzigen"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+
+concurrency:
+  group: nieuws
+  cancel-in-progress: false
+
+jobs:
+  verversen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Nieuws ophalen
+        id: nieuws
+        env:
+          DRY: ${{ inputs.dry_run }}
+        run: |
+          set +e
+          if [ "$DRY" = "true" ]; then flag=""; else flag="--write"; fi
+          python3 scripts/nieuws_update.py index.html nieuws-rapport.md $flag
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          cat nieuws-rapport.md >> "$GITHUB_STEP_SUMMARY"
+          exit 0
+
+      - name: Wijzigingen vastleggen
+        id: commit
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "Geen nieuwe berichten."; echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.html
+            git commit -m "Nieuws verstrekkers automatisch bijgewerkt ($(date -u +%Y-%m-%d))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Site opnieuw publiceren
+        if: ${{ steps.commit.outputs.changed == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages-build niet handmatig gestart; GitHub doet dit normaal zelf na de push."
+
+      - name: Issue openen, bijwerken of sluiten
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CODE: ${{ steps.nieuws.outputs.code }}
+        run: |
+          gh label create nieuws-bron --color fbca04 --description "Een nieuwsbron kon niet worden uitgelezen" 2>/dev/null || true
+          open=$(gh issue list --label nieuws-bron --state open --json number --jq '.[0].number // empty')
+          maand=$(date -u +%Y-%m)
+          if [ "$CODE" != "0" ]; then
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body-file nieuws-rapport.md
+            else
+              gh issue create --label nieuws-bron --title "Nieuwscontrole $maand: bron niet uitgelezen" --body-file nieuws-rapport.md
+            fi
+            exit 1
+          elif [ -n "$open" ]; then
+            gh issue comment "$open" --body "Alle nieuwsbronnen werken weer ($maand). Issue gesloten door de nieuwscontrole."
+            gh issue close "$open" --reason completed
+          fi
