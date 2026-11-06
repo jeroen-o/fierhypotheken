@@ -213,6 +213,18 @@ table.cs-table em{color:var(--muted)}
 .act-empty{font-size:14px;color:var(--muted);margin:0}
 .act-disc{font-size:12px;color:var(--muted);margin:14px 0 0;padding-top:10px;border-top:1px solid var(--line)}
 @media(max-width:640px){.act{padding:14px}.act-grid{grid-template-columns:1fr}.act-news li{flex-direction:column;gap:0}.act-news time{flex-basis:auto}}
+.newbadge{position:absolute;top:10px;right:10px;background:#ffcd00;color:#1d2632;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;pointer-events:none}
+.nw-list{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.nw-list li{display:grid;grid-template-columns:118px 170px minmax(0,1fr);gap:4px 16px;align-items:baseline;padding:12px 18px;border-bottom:1px solid var(--line);font-size:14.5px}
+.nw-list li:last-child{border-bottom:0}
+.nw-d{color:var(--muted);font-size:13px;white-space:nowrap}
+.nw-l{font-weight:800;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:var(--ink);font-size:14.5px}
+.nw-l:hover{color:var(--accent);text-decoration:underline}
+.nw-t a{font-weight:600;color:var(--accent)}
+.nw-n{display:inline-block;background:#ffcd00;color:#1d2632;font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:1px 7px;border-radius:999px;margin-left:8px;vertical-align:1px}
+.nw-note{font-size:13px;color:var(--muted);margin:14px 0 0}
+.nw-empty{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;color:var(--muted);margin:0}
+@media(max-width:700px){.nw-list li{grid-template-columns:1fr;padding:12px 14px}}
 .hd-intro{font-size:15px;color:var(--muted);margin:0 0 4px}
 .hd-steps{display:flex;flex-direction:column;gap:10px;margin:0 0 8px}
 .hd-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
@@ -323,6 +335,7 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     <button class="maintab" id="tab-helpdesk-btn" onclick="showMainTab('helpdesk')" type="button">Helpdesk Blinqx CRM en Advies</button>
     <button class="maintab" id="tab-aiassistent-btn" onclick="showMainTab('aiassistent')" type="button">Blinqx AI Assistent</button>
     <button class="maintab" id="tab-casus-btn" onclick="showMainTab('casus')" type="button">Casus Rob &amp; Marloes</button>
+    <button class="maintab" id="tab-nieuws-btn" onclick="showMainTab('nieuws')" type="button">Nieuws verstrekkers</button>
   </div>
   <div id="overview">
     <header class="tophero">
@@ -2758,6 +2771,18 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
     </div>
   </div>
 
+  <div id="nieuws" style="display:none">
+    <header class="tophero">
+      <div class="htxt">
+        <p class="eyebrow">Voor adviseurs</p>
+        <h1>Nieuws van geldverstrekkers</h1>
+        <p>Recente berichten van de adviseurspagina's van verstrekkers, nieuwste eerst. Elke titel opent het bericht bij de verstrekker zelf.</p>
+      </div>
+    </header>
+    <div id="nw-out"></div>
+    <p class="nw-note">Handmatig verzameld op 4 november 2026 uit openbare nieuwspagina's; berichten ouder dan 90 dagen worden hier niet getoond. Niet elke verstrekker publiceert openbaar nieuws: adviseursnieuws achter een inlog (bijvoorbeeld bij a.s.r., ABN AMRO en ASN Bank) staat hier dus niet. Bij rentewijzigingen staat alleen de titel; raadpleeg altijd de actuele bron voordat je adviseert.</p>
+  </div>
+
   <div id="casus" style="display:none">
     <header class="tophero">
       <div class="htxt">
@@ -3075,10 +3100,10 @@ function filterTiles(){
   document.getElementById('count').textContent=n+' van '+tiles.length;
 }
 function showMainTab(tab){
-  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn'), hdBtn=document.getElementById('tab-helpdesk-btn'); var aiBtn=document.getElementById('tab-aiassistent-btn'), aiDiv=document.getElementById('aiassistent'); var vcBtn=document.getElementById('tab-vragenuurtjecrm-btn'), vcDiv=document.getElementById('vragenuurtjecrm'); var csBtn=document.getElementById('tab-casus-btn'), csDiv=document.getElementById('casus');
+  var basisBtn=document.getElementById('tab-basis-btn'), elBtn=document.getElementById('tab-elearning-btn'), trBtn=document.getElementById('tab-trainingsdata-btn'), vuBtn=document.getElementById('tab-vragenuurtje-btn'), hdBtn=document.getElementById('tab-helpdesk-btn'); var aiBtn=document.getElementById('tab-aiassistent-btn'), aiDiv=document.getElementById('aiassistent'); var vcBtn=document.getElementById('tab-vragenuurtjecrm-btn'), vcDiv=document.getElementById('vragenuurtjecrm'); var csBtn=document.getElementById('tab-casus-btn'), csDiv=document.getElementById('casus'); var nwBtn=document.getElementById('tab-nieuws-btn'), nwDiv=document.getElementById('nieuws');
   var elDiv=document.getElementById('elearning'), trDiv=document.getElementById('trainingsdata'), vuDiv=document.getElementById('vragenuurtje'), hdDiv=document.getElementById('helpdesk');
-  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none'; hdDiv.style.display='none'; aiDiv.style.display='none'; vcDiv.style.display='none'; csDiv.style.display='none';
-  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active'); hdBtn.classList.remove('active'); aiBtn.classList.remove('active'); vcBtn.classList.remove('active'); csBtn.classList.remove('active');
+  elDiv.style.display='none'; trDiv.style.display='none'; vuDiv.style.display='none'; hdDiv.style.display='none'; aiDiv.style.display='none'; vcDiv.style.display='none'; csDiv.style.display='none'; nwDiv.style.display='none';
+  basisBtn.classList.remove('active'); elBtn.classList.remove('active'); trBtn.classList.remove('active'); vuBtn.classList.remove('active'); hdBtn.classList.remove('active'); aiBtn.classList.remove('active'); vcBtn.classList.remove('active'); csBtn.classList.remove('active'); nwBtn.classList.remove('active');
   if(tab==='elearning'){
     document.getElementById('overview').style.display='none';
     document.getElementById('detail').style.display='none';
@@ -3121,6 +3146,13 @@ function showMainTab(tab){
     csDiv.style.display='block';
     csBtn.classList.add('active');
     try{history.replaceState(null,'','#casus');}catch(e){}
+  } else if(tab==='nieuws'){
+    document.getElementById('overview').style.display='none';
+    document.getElementById('detail').style.display='none';
+    buildNieuws();
+    nwDiv.style.display='block';
+    nwBtn.classList.add('active');
+    try{history.replaceState(null,'','#nieuws');}catch(e){}
   } else {
     basisBtn.classList.add('active');
     showOverview();
@@ -3137,6 +3169,7 @@ function showMainTab(tab){
   else if(h==='helpdesk'){showMainTab('helpdesk');}
   else if(h==='aiassistent'||h==='fin'){showMainTab('aiassistent');}
   else if(h==='casus'){showMainTab('casus');}
+  else if(h==='nieuws'){showMainTab('nieuws');}
   else if(h && SLUGS.indexOf(h)>-1){showLender(h);}
 })();
 document.querySelectorAll('#aiassistent .ai-copy').forEach(function(b){b.addEventListener('click',function(){
@@ -3162,5 +3195,45 @@ document.getElementById('cs-print').addEventListener('click',function(){
   w.focus();
   setTimeout(function(){w.print();},300);
 });
+function collectNieuws(){
+  var out=[];
+  document.querySelectorAll('.lender-detail').forEach(function(sec){
+    var slug=sec.id.replace(/^d-/,''), h2=sec.querySelector('h2'), name=h2?h2.textContent:slug;
+    sec.querySelectorAll('.act-news li').forEach(function(li){
+      var t=li.querySelector('time'), a=li.querySelector('a'); if(!a) return;
+      out.push({slug:slug,name:name,date:t&&t.getAttribute('datetime')?t.getAttribute('datetime'):'',title:a.textContent,url:a.href});
+    });
+  });
+  return out;
+}
+function nwDays(d){var x=new Date(d+'T12:00:00');return Math.floor((Date.now()-x.getTime())/864e5);}
+function nwFmt(d){var m=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'],p=d.split('-');return parseInt(p[2],10)+' '+m[parseInt(p[1],10)-1]+' '+p[0];}
+function buildNieuws(){
+  var box=document.getElementById('nw-out'); box.textContent='';
+  var all=collectNieuws();
+  var dated=all.filter(function(n){return n.date&&nwDays(n.date)<=90;}).sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0;});
+  var undated=all.filter(function(n){return !n.date;});
+  function row(n){
+    var li=document.createElement('li'), d=document.createElement('span'), l=document.createElement('button'), t=document.createElement('span'), a=document.createElement('a');
+    d.className='nw-d'; d.textContent=n.date?nwFmt(n.date):'Geen datum';
+    l.className='nw-l'; l.type='button'; l.textContent=n.name; l.onclick=function(){showLender(n.slug);};
+    t.className='nw-t'; a.href=n.url; a.target='_blank'; a.rel='noopener'; a.textContent=n.title; t.appendChild(a);
+    if(n.date&&nwDays(n.date)<=14){var b=document.createElement('span');b.className='nw-n';b.textContent='Nieuw';t.appendChild(b);}
+    li.appendChild(d); li.appendChild(l); li.appendChild(t); return li;
+  }
+  if(!dated.length&&!undated.length){var e=document.createElement('p');e.className='nw-empty';e.textContent='Er zijn geen recente berichten om te tonen.';box.appendChild(e);return;}
+  if(dated.length){var ul=document.createElement('ul');ul.className='nw-list';dated.forEach(function(n){ul.appendChild(row(n));});box.appendChild(ul);}
+  if(undated.length){
+    var h=document.createElement('div');h.className='tr-cat';h.textContent='Zonder publicatiedatum';box.appendChild(h);
+    var u2=document.createElement('ul');u2.className='nw-list';undated.forEach(function(n){u2.appendChild(row(n));});box.appendChild(u2);
+  }
+}
+(function(){
+  var seen={};
+  collectNieuws().forEach(function(n){if(n.date&&nwDays(n.date)<=14)seen[n.slug]=1;});
+  document.querySelectorAll('.tile[data-slug]').forEach(function(t){
+    if(seen[t.getAttribute('data-slug')]){var b=document.createElement('span');b.className='newbadge';b.textContent='Nieuw';t.appendChild(b);}
+  });
+})();
 </script>
 </body></html>
