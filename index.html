@@ -245,6 +245,14 @@ table.cs-table em{color:var(--muted)}
 .pop-sec{font-weight:700;font-size:14px}
 .pop-close{margin-left:auto;background:none;border:0;color:var(--muted);font-size:14px;cursor:pointer;text-decoration:underline;padding:6px}
 @media(max-width:480px){.pop-eb{letter-spacing:.05em;font-size:11px;margin-right:44px}.pop-in{padding:20px 18px 18px}.pop-box h2{font-size:19px}.pop-close{margin-left:0}}
+.hd-search{display:flex;gap:8px;margin:16px 0 6px}
+.hd-search input{flex:1 1 auto;min-width:0;font:inherit;font-size:15px;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.hd-search input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.hd-search button{flex:0 0 auto;font:inherit;font-size:14.5px;font-weight:800;border:0;border-radius:999px;padding:0 22px;background:#12151a;color:#fff;cursor:pointer}
+.hd-search button:hover{background:#2a323c}
+.hd-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hd-search-note{font-size:12.5px;color:var(--muted);margin:0 4px 18px}
+@media(max-width:480px){.hd-search button{padding:0 16px}}
 .hd-intro{font-size:15px;color:var(--muted);margin:0 0 4px}
 .hd-steps{display:flex;flex-direction:column;gap:10px;margin:0 0 8px}
 .hd-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
@@ -2672,6 +2680,13 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
       </div>
     </header>
 
+    <form class="hd-search" id="hd-search" action="https://support-eblinqx-connect.nl/zoeken/index.html" method="get" target="_blank" rel="noopener" role="search">
+      <label class="hd-sr" for="hd-q">Zoek in de kennisbank van Blinqx Support</label>
+      <input id="hd-q" type="search" name="q" placeholder="Zoek in de kennisbank van Blinqx Support, bijvoorbeeld: nieuwe gebruiker" autocomplete="off">
+      <button type="submit">Zoeken</button>
+    </form>
+    <p class="hd-search-note">Opent de zoekresultaten op support-eblinqx-connect.nl in een nieuw tabblad. Voer hier geen klantgegevens in.</p>
+
     <div class="hd-track">Route van vraag naar antwoord</div>
     <div class="hd-steps">
       <div class="hd-step"><div class="num">1</div><div class="body"><strong>Fin AI</strong><span>Stel altijd eerst de vraag aan Fin AI voor een eerste antwoord. Wat is de situatie en wat lukt niet of is anders dan verwacht?</span></div></div>
@@ -3316,5 +3331,8 @@ function buildNieuws(){
   var h=(location.hash||'').replace('#','');
   if(new Date()<=END && !h) open();
 })();
+document.getElementById('hd-search').addEventListener('submit',function(e){
+  if(!document.getElementById('hd-q').value.trim()){e.preventDefault();window.open('https://support-eblinqx-connect.nl/index.html','_blank','noopener');}
+});
 </script>
 </body></html>
