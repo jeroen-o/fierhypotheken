@@ -1,11 +1,16 @@
 name: Nieuws verversen
 
-# Haalt op de 1e van de maand het nieuws van Obvion, NN, Florius, NIBC en Jens op
-# en werkt index.html bij. Mislukt een bron, dan blijft het oude nieuws staan en
-# wordt er een issue geopend. Handmatig starten kan via het tabblad Actions.
+# Haalt elke ochtend rond 10.00 uur (Nederlandse tijd) het nieuws van Obvion, NN,
+# Florius, NIBC en Jens op en werkt index.html bij als er iets nieuws is. Mislukt een
+# bron, dan blijft het oude nieuws staan en wordt er een issue geopend.
+# GitHub plant alleen in UTC: 10.00 uur is 08:00 UTC in de zomer en 09:00 UTC in de
+# winter. Daarom staan er twee tijdstippen en slaat de stap "Tijdcontrole" het
+# verkeerde tijdstip over. GitHub kan geplande runs enkele minuten vertragen.
+# Handmatig starten kan via het tabblad Actions.
 on:
   schedule:
-    - cron: "23 6 1 * *"
+    - cron: "0 8 * * *"
+    - cron: "0 9 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -27,10 +32,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Tijdcontrole
+        id: tijd
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          uur=$(TZ=Europe/Amsterdam date +%H)
+          if [ "$EVENT" = "schedule" ] && [ "$uur" != "10" ]; then
+            echo "Het is $uur uur in Nederland, niet 10 uur: deze run wordt overgeslagen."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: ${{ steps.tijd.outputs.run == 'true' }}
 
       - name: Nieuws ophalen
         id: nieuws
+        if: ${{ steps.tijd.outputs.run == 'true' }}
         env:
           DRY: ${{ inputs.dry_run }}
         run: |
@@ -43,7 +63,7 @@ jobs:
 
       - name: Wijzigingen vastleggen
         id: commit
-        if: ${{ inputs.dry_run != true }}
+        if: ${{ steps.tijd.outputs.run == 'true' && inputs.dry_run != true }}
         run: |
           if git diff --quiet -- index.html; then
             echo "Geen nieuwe berichten."; echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -63,21 +83,21 @@ jobs:
         run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages-build niet handmatig gestart; GitHub doet dit normaal zelf na de push."
 
       - name: Issue openen, bijwerken of sluiten
+        if: ${{ steps.tijd.outputs.run == 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           CODE: ${{ steps.nieuws.outputs.code }}
         run: |
           gh label create nieuws-bron --color fbca04 --description "Een nieuwsbron kon niet worden uitgelezen" 2>/dev/null || true
           open=$(gh issue list --label nieuws-bron --state open --json number --jq '.[0].number // empty')
-          maand=$(date -u +%Y-%m)
           if [ "$CODE" != "0" ]; then
             if [ -n "$open" ]; then
-              gh issue comment "$open" --body-file nieuws-rapport.md
+              echo "Er staat al een open issue (#$open); geen nieuwe melding."
             else
-              gh issue create --label nieuws-bron --title "Nieuwscontrole $maand: bron niet uitgelezen" --body-file nieuws-rapport.md
+              gh issue create --label nieuws-bron --title "Nieuwscontrole $(date -u +%Y-%m-%d): bron niet uitgelezen" --body-file nieuws-rapport.md
+              exit 1
             fi
-            exit 1
           elif [ -n "$open" ]; then
-            gh issue comment "$open" --body "Alle nieuwsbronnen werken weer ($maand). Issue gesloten door de nieuwscontrole."
+            gh issue comment "$open" --body "Alle nieuwsbronnen werken weer ($(date -u +%Y-%m-%d)). Issue gesloten door de nieuwscontrole."
             gh issue close "$open" --reason completed
           fi
