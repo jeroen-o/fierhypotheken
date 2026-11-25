@@ -253,6 +253,12 @@ table.cs-table em{color:var(--muted)}
 .hd-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .hd-search-note{font-size:12.5px;color:var(--muted);margin:0 4px 18px}
 @media(max-width:480px){.hd-search button{padding:0 16px}}
+.site-ft{margin:26px 0 0;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.site-ft .ft-in{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:14px}
+.site-ft strong{font-size:14px;margin-right:2px}
+.site-ft a{font-weight:600;color:var(--accent)}
+.site-ft .ft-more{margin-left:auto;font-size:13px}
+@media(max-width:640px){.site-ft{padding:14px}.site-ft .ft-in{flex-direction:column;align-items:flex-start;gap:6px}.site-ft .ft-more{margin-left:0}}
 .hd-intro{font-size:15px;color:var(--muted);margin:0 0 4px}
 .hd-steps{display:flex;flex-direction:column;gap:10px;margin:0 0 8px}
 .hd-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
@@ -3130,6 +3136,15 @@ Ik verwacht: dat Fin vertelt welk veld ik moet aanpassen, of dat ik word doorver
   </div>
 
   <p class="foot">Geldverstrekkersinformatie · uitsluitend voor adviseurs · 38 geldverstrekkers</p>
+  <footer class="site-ft" id="site-ft">
+    <div class="ft-in">
+      <strong>Contact ASN Support</strong>
+      <span>&#9993;&#65039; <a href="mailto:asn-support@blinqx.tech">asn-support@blinqx.tech</a></span>
+      <span>&#128222; Premium Advies <a href="tel:+31851060611">085 106 06 11</a></span>
+      <span>&#128222; Premium eBlinqx <a href="tel:+31851060612">085 106 06 12</a></span>
+      <a class="ft-more" href="#helpdesk" onclick="showMainTab('helpdesk');return false;">Alle contactgegevens &rarr;</a>
+    </div>
+  </footer>
 </div>
 <div class="pop-ov" id="pop-ov" aria-hidden="true">
   <div class="pop-box" role="dialog" aria-modal="true" aria-labelledby="pop-t">
