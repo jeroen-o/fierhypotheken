@@ -1,11 +1,11 @@
 name: Nieuws verversen
 
-# Haalt elke ochtend rond 10.00 uur (Nederlandse tijd) het nieuws van Obvion, NN,
-# Florius, NIBC en Jens op en werkt index.html bij als er iets nieuws is. Mislukt een
-# bron, dan blijft het oude nieuws staan en wordt er een issue geopend.
-# GitHub plant alleen in UTC: 10.00 uur is 08:00 UTC in de zomer en 09:00 UTC in de
-# winter. Daarom staan er twee tijdstippen en slaat de stap "Tijdcontrole" het
-# verkeerde tijdstip over. GitHub kan geplande runs enkele minuten vertragen.
+# Haalt elke ochtend het nieuws van Obvion, NN, Florius, NIBC en Jens op en werkt
+# index.html bij als er iets nieuws is. Mislukt een bron, dan blijft het oude nieuws
+# staan en wordt er een issue geopend.
+# Geplande runs staan op 08:00 en 09:00 UTC (rond 10.00 uur Nederlandse tijd in zomer
+# en winter). GitHub start geplande runs best-effort en soms uren later; het script is
+# veilig om vaker te draaien, want het commit alleen bij nieuwe berichten.
 # Handmatig starten kan via het tabblad Actions.
 on:
   schedule:
@@ -32,25 +32,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Tijdcontrole
-        id: tijd
-        env:
-          EVENT: ${{ github.event_name }}
-        run: |
-          uur=$(TZ=Europe/Amsterdam date +%H)
-          if [ "$EVENT" = "schedule" ] && [ "$uur" != "10" ]; then
-            echo "Het is $uur uur in Nederland, niet 10 uur: deze run wordt overgeslagen."
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v4
-        if: ${{ steps.tijd.outputs.run == 'true' }}
 
       - name: Nieuws ophalen
         id: nieuws
-        if: ${{ steps.tijd.outputs.run == 'true' }}
         env:
           DRY: ${{ inputs.dry_run }}
         run: |
@@ -63,7 +48,7 @@ jobs:
 
       - name: Wijzigingen vastleggen
         id: commit
-        if: ${{ steps.tijd.outputs.run == 'true' && inputs.dry_run != true }}
+        if: ${{ inputs.dry_run != true }}
         run: |
           if git diff --quiet -- index.html; then
             echo "Geen nieuwe berichten."; echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -83,7 +68,6 @@ jobs:
         run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages-build niet handmatig gestart; GitHub doet dit normaal zelf na de push."
 
       - name: Issue openen, bijwerken of sluiten
-        if: ${{ steps.tijd.outputs.run == 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           CODE: ${{ steps.nieuws.outputs.code }}
