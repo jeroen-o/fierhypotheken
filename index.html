@@ -225,26 +225,6 @@ table.cs-table em{color:var(--muted)}
 .nw-note{font-size:13px;color:var(--muted);margin:14px 0 0}
 .nw-empty{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;color:var(--muted);margin:0}
 @media(max-width:700px){.nw-list li{grid-template-columns:1fr;padding:12px 14px}}
-.pop-ov{position:fixed;inset:0;background:rgba(18,21,26,.62);display:none;align-items:center;justify-content:center;padding:16px;z-index:1000}
-.pop-ov.open{display:flex}
-.pop-box{position:relative;background:var(--card);border-radius:18px;max-width:560px;width:100%;max-height:calc(100vh - 32px);overflow:auto;box-shadow:0 24px 70px rgba(0,0,0,.35);border-top:6px solid #ffcd00}
-.pop-in{padding:24px 26px 22px}
-.pop-x{position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;border-radius:50%;background:#f1f3f6;color:var(--ink);font-size:20px;line-height:1;cursor:pointer}
-.pop-x:hover{background:#e3e7ec}
-.pop-eb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--accent);margin:0 36px 6px 0}
-.pop-box h2{margin:0 36px 10px 0;font-size:22px;line-height:1.25}
-.pop-box p{margin:0 0 12px;font-size:14.5px}
-.pop-dates{list-style:none;margin:0 0 12px;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.pop-dates li{display:flex;gap:6px 14px;justify-content:space-between;flex-wrap:wrap;padding:9px 14px;border-bottom:1px solid var(--line);font-size:14px}
-.pop-dates li:last-child{border-bottom:0}
-.pop-dates b{white-space:nowrap}
-.pop-meta{font-size:13px!important;color:var(--muted)}
-.pop-act{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
-.pop-btn{display:inline-block;background:#12151a;color:#fff;font-weight:800;font-size:14.5px;border-radius:999px;padding:11px 20px;text-decoration:none}
-.pop-btn:hover{background:#2a323c;text-decoration:none}
-.pop-sec{font-weight:700;font-size:14px}
-.pop-close{margin-left:auto;background:none;border:0;color:var(--muted);font-size:14px;cursor:pointer;text-decoration:underline;padding:6px}
-@media(max-width:480px){.pop-eb{letter-spacing:.05em;font-size:11px;margin-right:44px}.pop-in{padding:20px 18px 18px}.pop-box h2{font-size:19px}.pop-close{margin-left:0}}
 .hd-search{display:flex;gap:8px;margin:16px 0 6px}
 .hd-search input{flex:1 1 auto;min-width:0;font:inherit;font-size:15px;padding:11px 16px;border:2px solid #e0662b;border-radius:999px;background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
 .hd-search input:focus{outline:3px solid rgba(224,102,43,.30);outline-offset:1px}
@@ -2875,13 +2855,6 @@ color:var(--ink);text-decoration:none;box-shadow:var(--shadow)}
         <p>Recente berichten van de adviseurspagina's van verstrekkers, nieuwste eerst. Elke titel opent het bericht bij de verstrekker zelf.</p>
       </div>
     </header>
-    <div id="nw-eigen">
-      <div class="tr-cat">Van Blinqx &amp; Bureau DFO</div>
-      <ul class="nw-list">
-        <li><span class="nw-d">24&ndash;26 nov 2026</span><span class="nw-l" style="cursor:default">Bureau DFO</span><span class="nw-t"><a href="https://informatieronde.dfobv.nl/?utm_source=fierhypotheken&amp;utm_medium=referral&amp;utm_campaign=informatieronde-2026&amp;utm_content=nieuws" target="_blank" rel="noopener">Informatieronde: nieuwe acceptatievoorwaarden hypotheken (Oostzaan, Ridderkerk, Houten)</a><span class="nw-n">Nieuw</span> &middot; <a href="https://www.linkedin.com/feed/update/urn:li:activity:7526225497488412672" target="_blank" rel="noopener">LinkedIn-bericht</a></span></li>
-      </ul>
-      <div class="tr-cat">Van geldverstrekkers</div>
-    </div>
     <div id="nw-out"></div>
     <p class="nw-note">Elke ochtend rond 10.00 uur wordt het nieuws automatisch gecontroleerd in de openbare nieuwspagina's van Obvion, NN (alleen hypotheekonderwerpen), Florius, NIBC en Jens; Nationale Waarborg is handmatig toegevoegd. Laatste wijziging: <span id="nw-bijgewerkt">18 november 2026</span>. Niet elke verstrekker publiceert openbaar nieuws: adviseursnieuws achter een inlog (bijvoorbeeld bij a.s.r., ABN AMRO en ASN Bank) staat hier dus niet. Bij rentewijzigingen staat alleen de titel; raadpleeg altijd de actuele bron voordat je adviseert. Berichten ouder dan 90 dagen worden hier niet getoond. Niet elke verstrekker publiceert openbaar nieuws: adviseursnieuws achter een inlog (bijvoorbeeld bij a.s.r., ABN AMRO en ASN Bank) staat hier dus niet. Bij rentewijzigingen staat alleen de titel; raadpleeg altijd de actuele bron voordat je adviseert.</p>
   </div>
@@ -3183,27 +3156,6 @@ Ik verwacht: dat Fin vertelt welk veld ik moet aanpassen, of dat ik word doorver
     </div>
   </footer>
 </div>
-<div class="pop-ov" id="pop-ov" aria-hidden="true">
-  <div class="pop-box" role="dialog" aria-modal="true" aria-labelledby="pop-t">
-    <button class="pop-x" id="pop-x" type="button" aria-label="Sluiten">&times;</button>
-    <div class="pop-in">
-      <p class="pop-eb">Informatieronde &middot; Bureau DFO</p>
-      <h2 id="pop-t">De acceptatievoorwaarden voor hypotheken veranderen. Ben jij er klaar voor?</h2>
-      <p>Landelijke informatieavond voor hypotheekadviseurs, in samenwerking met de NVHP. Eén avond, drie invalshoeken: beleid, advies en bedrijfsvoering.</p>
-      <ul class="pop-dates">
-        <li><b>Di 24 november</b><span>Van der Valk Hotel Oostzaan</span></li>
-        <li><b>Wo 25 november</b><span>Van der Valk Hotel Ridderkerk</span></li>
-        <li><b>Do 26 november</b><span>Van der Valk Hotel Houten</span></li>
-      </ul>
-      <p class="pop-meta">Ontvangst 19.00 uur, einde 21.30 uur &middot; &euro;&nbsp;24,50 excl. btw per persoon &middot; met een vertegenwoordiger van ASN, ING of Rabobank, Rob Timmermans (Impact) en Dennes Roes. Dagvoorzitter: Mark de Bruijn (NVHP).</p>
-      <div class="pop-act">
-        <a class="pop-btn" id="pop-go" href="https://informatieronde.dfobv.nl/?utm_source=fierhypotheken&amp;utm_medium=referral&amp;utm_campaign=informatieronde-2026&amp;utm_content=popup" target="_blank" rel="noopener">Meer info &amp; aanmelden</a>
-        <a class="pop-sec" href="https://www.linkedin.com/feed/update/urn:li:activity:7526225497488412672" target="_blank" rel="noopener">Bericht op LinkedIn</a>
-        <button class="pop-close" id="pop-close" type="button">Sluiten</button>
-      </div>
-    </div>
-  </div>
-</div>
 <script>
 var SLUGS = ["a-s-r", "abn-amro", "allianz", "argenta", "asn-bank", "attens-hypotheken", "bijbouwe", "build-finance", "bunq", "centraal-beheer", "clarian-wonen", "de-nederlandse", "florius", "groene-hart-hypotheken", "handelsbanken", "hollandwoont", "impact-hypotheken", "ing", "iqwoon", "jens", "knab", "lloyds-bank", "merius", "munt-hypotheken", "nationale-waarborg", "nationale-nederlanden", "nibc", "obvion", "orange-credit", "rabobank", "robuust", "socio-hypotheek", "solidbriq", "syntrus-achmea", "triodos-bank", "tulp-hypotheken", "venn-hypotheken", "vista-hypotheken", "impact-opleidingen", "bureau-dfo", "missing-piece", "formulieren"];
 function showLender(slug){
@@ -3367,23 +3319,6 @@ function buildNieuws(){
   document.querySelectorAll('.tile[data-slug]').forEach(function(t){
     if(seen[t.getAttribute('data-slug')]){var b=document.createElement('span');b.className='newbadge';b.textContent='Nieuw';t.appendChild(b);}
   });
-})();
-(function(){
-  var END=new Date('2026-11-26T23:59:59'), ov=document.getElementById('pop-ov'), last=null;
-  function open(){last=document.activeElement;ov.classList.add('open');ov.setAttribute('aria-hidden','false');document.getElementById('pop-x').focus();}
-  function close(){ov.classList.remove('open');ov.setAttribute('aria-hidden','true');if(last&&last.focus)try{last.focus();}catch(e){}}
-  document.getElementById('pop-x').onclick=close;document.getElementById('pop-close').onclick=close;
-  ov.addEventListener('click',function(e){if(e.target===ov)close();});
-  document.addEventListener('keydown',function(e){
-    if(!ov.classList.contains('open'))return;
-    if(e.key==='Escape'){close();return;}
-    if(e.key==='Tab'){var f=ov.querySelectorAll('button,a[href]');if(!f.length)return;var a=f[0],z=f[f.length-1];
-      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
-  });
-  var eigen=document.getElementById('nw-eigen'); if(eigen&&new Date()>END) eigen.style.display='none';
-  // alleen op de startpagina (geen deeplink naar een tabblad of verstrekker) en tot en met de laatste avond; onthouden gebeurt bewust niet (geen opslag, ook niet in een iframe)
-  var h=(location.hash||'').replace('#','');
-  if(new Date()<=END && !h) open();
 })();
 document.getElementById('hd-search').addEventListener('submit',function(e){
   if(!document.getElementById('hd-q').value.trim()){e.preventDefault();window.open('https://support-eblinqx-connect.nl/index.html','_blank','noopener');}
